@@ -1,0 +1,311 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <meta name="theme-color" content="#080808" />
+  <title>천안 프리미엄 | 퍼블릭 · 하이퍼블릭 · 다국적</title>
+  <meta name="description" content="천안 퍼블릭·하이퍼블릭·다국적 안내. 천안 전지역 픽업, 생일 서비스, 각 업종 문의." />
+  <style>
+    :root{
+      --bg:#070707; --bg2:#0d0d0d; --panel:#121212; --panel2:#171717;
+      --gold:#d7b15a; --gold2:#f4dfa4; --text:#f7f7f7; --muted:#aaa;
+      --line:rgba(215,177,90,.22); --soft:rgba(255,255,255,.055);
+      --shadow:0 24px 70px rgba(0,0,0,.48);
+    }
+    *{box-sizing:border-box}
+    html{scroll-behavior:smooth}
+    body{
+      margin:0;color:var(--text);background:
+      radial-gradient(circle at 50% -10%,rgba(215,177,90,.14),transparent 32%),
+      radial-gradient(circle at 100% 22%,rgba(215,177,90,.08),transparent 20%),
+      var(--bg);
+      font-family:Pretendard,"Noto Sans KR","Apple SD Gothic Neo","Malgun Gothic",Arial,sans-serif;
+      line-height:1.65;
+    }
+    a{text-decoration:none;color:inherit}
+    .wrap{max-width:980px;margin:0 auto;padding:0 18px}
+    .nav{
+      position:sticky;top:0;z-index:100;
+      backdrop-filter:blur(14px);background:rgba(6,6,6,.82);
+      border-bottom:1px solid var(--line)
+    }
+    .navin{max-width:980px;margin:auto;padding:11px 18px;display:flex;align-items:center;justify-content:space-between;gap:12px}
+    .logo{font-weight:950;letter-spacing:.08em;color:var(--gold2)}
+    .navlinks{display:flex;gap:18px;align-items:center;font-size:13px;color:#d0d0d0}
+    .topcall{padding:9px 13px;border-radius:999px;background:linear-gradient(135deg,#f1db9a,#b9852c);color:#090909;font-weight:950}
+    .hero{min-height:83vh;display:flex;align-items:center;text-align:center;padding:70px 0 55px}
+    .kicker{font-size:12px;letter-spacing:.2em;color:var(--gold2);font-weight:900}
+    h1{font-size:clamp(42px,10vw,82px);line-height:1.02;letter-spacing:-.055em;margin:16px 0 18px}
+    .gold{background:linear-gradient(135deg,#fff2c9,#c79537,#f5dc91);-webkit-background-clip:text;background-clip:text;color:transparent}
+    .hero p{max-width:720px;margin:auto;color:#d1d1d1;font-size:clamp(16px,3.8vw,21px)}
+    .heroBtns{display:flex;justify-content:center;gap:12px;flex-wrap:wrap;margin-top:30px}
+    .btn{display:inline-flex;align-items:center;justify-content:center;min-width:195px;padding:16px 20px;border-radius:14px;font-weight:950}
+    .btn.primary{background:linear-gradient(135deg,#f1db9a,#b9852c);color:#090909;box-shadow:0 14px 35px rgba(0,0,0,.45)}
+    .btn.secondary{background:#101010;border:1px solid var(--line)}
+    .badges{display:flex;flex-wrap:wrap;justify-content:center;gap:8px;margin-top:24px}
+    .badge{border:1px solid #232323;background:#0e0e0e;border-radius:999px;padding:7px 11px;font-size:12px;color:#c7c7c7}
+    section{padding:68px 0}
+    .sectionHead{text-align:center;margin-bottom:28px}
+    .sectionHead small{color:var(--gold);font-weight:950;letter-spacing:.14em}
+    .sectionHead h2{font-size:clamp(28px,6vw,40px);margin:6px 0 7px;letter-spacing:-.04em}
+    .sectionHead p{margin:0;color:var(--muted)}
+    .why{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
+    .whyCard,.priceCard,.serviceCard,.faq,.guideStep{
+      border:1px solid #202020;background:linear-gradient(180deg,var(--panel2),var(--panel));
+      border-radius:21px;box-shadow:var(--shadow)
+    }
+    .whyCard{padding:24px}
+    .whyCard .icon{font-size:26px}
+    .whyCard h3{margin:10px 0 6px;font-size:20px}
+    .whyCard p{margin:0;color:var(--muted);font-size:14px}
+    .priceGrid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
+    .priceCard{padding:25px;position:relative;overflow:hidden}
+    .priceCard:before{content:"";position:absolute;left:0;top:0;width:100%;height:2px;background:linear-gradient(90deg,transparent,var(--gold),transparent)}
+    .en{font-size:11px;color:var(--gold2);font-weight:900;letter-spacing:.16em}
+    .priceCard h3{margin:8px 0 0;font-size:23px}
+    .price{font-size:34px;font-weight:950;margin:9px 0;color:#fff}
+    .price span{font-size:14px;color:#999;font-weight:700}
+    .priceCard p{color:#aaa;font-size:14px;margin:0 0 17px}
+    .smallCall{display:block;text-align:center;padding:12px;border-radius:12px;background:var(--soft);border:1px solid var(--line);font-weight:900;color:var(--gold2)}
+    .serviceGrid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
+    .serviceCard{padding:22px;text-align:center}
+    .serviceCard .big{font-size:29px}
+    .serviceCard strong{display:block;margin:8px 0 5px;color:var(--gold2)}
+    .serviceCard span{font-size:14px;color:#aaa}
+    .guide{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
+    .guideStep{padding:24px;text-align:center}
+    .num{width:38px;height:38px;display:grid;place-items:center;border-radius:50%;background:rgba(215,177,90,.12);border:1px solid var(--line);color:var(--gold2);font-weight:950;margin:0 auto 11px}
+    .guideStep strong{display:block;margin-bottom:4px}
+    .guideStep span{font-size:14px;color:#aaa}
+    .faqWrap{display:grid;gap:10px;max-width:800px;margin:auto}
+    .faq{padding:20px}
+    .faq strong{display:block;color:#eee;margin-bottom:5px}
+    .faq span{color:#aaa;font-size:14px}
+    .cta{margin:10px 0 105px;padding:38px 24px;text-align:center;border-radius:25px;border:1px solid var(--line);
+      background:linear-gradient(135deg,rgba(215,177,90,.13),rgba(255,255,255,.02));box-shadow:var(--shadow)}
+    .cta h2{font-size:clamp(29px,6vw,42px);margin:0 0 8px}
+    .cta p{color:#aaa;margin:0 0 22px}
+    .phone{font-size:clamp(27px,7vw,44px);font-weight:950;color:var(--gold2)}
+    footer{text-align:center;color:#666;font-size:12px;padding:0 0 28px}
+    .fixedCall{position:fixed;z-index:120;left:12px;right:12px;bottom:12px;max-width:760px;margin:auto;padding:16px;border-radius:17px;text-align:center;background:linear-gradient(135deg,#f2dd9d,#b9852c);color:#090909;font-weight:950;box-shadow:0 14px 40px rgba(0,0,0,.55)}
+
+    .attendanceBox{
+      max-width:820px;margin:0 auto;padding:28px 22px;border-radius:24px;
+      background:linear-gradient(180deg,#151515,#0d0d0d);
+      border:1px solid var(--line);box-shadow:var(--shadow)
+    }
+    .todayDate{text-align:center;color:var(--gold2);font-weight:950;letter-spacing:.12em;margin-bottom:18px}
+    .attendanceList{display:grid;gap:10px}
+    .attendanceRow{
+      display:flex;align-items:center;justify-content:space-between;gap:14px;
+      padding:15px 16px;border-radius:15px;background:#0d0d0d;border:1px solid #222
+    }
+    .attendanceName{font-weight:900}
+    .attendanceCount{font-size:20px;font-weight:950;color:var(--gold2)}
+    .statusLine{
+      margin-top:16px;text-align:center;padding:14px;border-radius:14px;
+      background:rgba(58,185,103,.08);border:1px solid rgba(58,185,103,.25);
+      color:#9be0b3;font-weight:950
+    }
+    .statusDot{display:inline-block;width:9px;height:9px;border-radius:50%;background:#39c56f;margin-right:7px;box-shadow:0 0 14px rgba(57,197,111,.7)}
+    .attendanceNote{text-align:center;margin-top:11px;color:#777;font-size:12px}
+
+    @media(max-width:800px){
+      .navlinks a:not(.topcall){display:none}
+      .why,.priceGrid,.serviceGrid,.guide{grid-template-columns:1fr}
+      section{padding:48px 0}
+      .hero{min-height:74vh}
+    }
+  </style>
+</head>
+<body>
+  <header class="nav">
+    <div class="navin">
+      <div class="logo">CHEONAN PREMIUM</div>
+      <nav class="navlinks">
+        <a href="#today">오늘현황</a><a href="#price">가격</a><a href="#service">서비스</a><a href="#guide">이용안내</a>
+        <a class="topcall" href="tel:01075196883">☎ 전화걸기</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="wrap">
+        <div class="kicker">CHEONAN PREMIUM NIGHT</div>
+        <h1>천안 프리미엄<br><span class="gold">퍼블릭 · 하이퍼블릭 · 다국적</span></h1>
+        <p>원하는 업종을 한 번에 비교하고 빠르게 안내받으세요.<br>천안 전지역 픽업 · 생일서비스 · 각 업종 문의 가능</p>
+        <div class="heroBtns">
+          <a class="btn primary" href="tel:01075196883">☎ 010-7519-6883</a>
+          <a class="btn secondary" href="#price">가격 바로보기</a>
+        </div>
+        <div class="badges">
+          <span class="badge">천안 전지역 픽업</span>
+          <span class="badge">생일서비스</span>
+          <span class="badge">각 업종 문의</span>
+          <span class="badge">빠른 전화상담</span>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <div class="wrap">
+        <div class="sectionHead">
+          <small>WHY CHOOSE US</small>
+          <h2>한 번에 편하게 안내</h2>
+          <p>원하는 스타일과 예산에 맞춰 업종별로 빠르게 상담해드립니다.</p>
+        </div>
+        <div class="why">
+          <div class="whyCard"><div class="icon">✨</div><h3>업종별 맞춤 안내</h3><p>퍼블릭부터 하이퍼블릭, 다국적까지 원하는 업종을 편하게 문의할 수 있습니다.</p></div>
+          <div class="whyCard"><div class="icon">🚗</div><h3>천안 전지역 픽업</h3><p>방문 전 전화 주시면 위치와 시간에 맞춰 픽업 가능 여부를 빠르게 안내합니다.</p></div>
+          <div class="whyCard"><div class="icon">🎂</div><h3>생일 서비스</h3><p>생일 또는 특별한 날 방문 시 예약 단계에서 서비스 내용을 문의해주세요.</p></div>
+        </div>
+      </div>
+    </section>
+
+
+    <section id="today">
+      <div class="wrap">
+        <div class="sectionHead">
+          <small>TODAY STATUS</small>
+          <h2>오늘의 운영 현황</h2>
+          <p>날짜와 업종별 안내 인원이 매일 자동으로 갱신됩니다.</p>
+        </div>
+        <div class="attendanceBox">
+          <div class="todayDate" id="todayDate">TODAY</div>
+          <div class="attendanceList">
+            <div class="attendanceRow">
+              <div class="attendanceName">🟢 퍼블릭 오늘 안내 인원</div>
+              <div class="attendanceCount"><span id="publicCount">--</span>명</div>
+            </div>
+            <div class="attendanceRow">
+              <div class="attendanceName">🟢 하이퍼블릭 오늘 안내 인원</div>
+              <div class="attendanceCount"><span id="highCount">--</span>명</div>
+            </div>
+            <div class="attendanceRow">
+              <div class="attendanceName">🟢 다국적 오늘 안내 인원</div>
+              <div class="attendanceCount"><span id="globalCount">--</span>명</div>
+            </div>
+          </div>
+          <div class="statusLine"><span class="statusDot"></span>현재 정상 영업중</div>
+          <div class="attendanceNote">※ 표시 인원은 당일 업종별 안내용 수치이며 실제 현황은 문의 시 확인해주세요.</div>
+        </div>
+      </div>
+    </section>
+
+    <section id="price">
+      <div class="wrap">
+        <div class="sectionHead">
+          <small>PRICING</small>
+          <h2>업종별 가격 안내</h2>
+          <p>원하는 업종을 선택하고 바로 문의하세요.</p>
+        </div>
+        <div class="priceGrid">
+          <article class="priceCard">
+            <div class="en">PUBLIC</div><h3>퍼블릭</h3>
+            <div class="price">10만원 <span>부터</span></div>
+            <p>부담 없이 즐기기 좋은 퍼블릭 업종. 세부 구성은 전화 문의.</p>
+            <a class="smallCall" href="tel:01075196883">퍼블릭 문의하기</a>
+          </article>
+          <article class="priceCard">
+            <div class="en">HIGH PUBLIC</div><h3>하이퍼블릭</h3>
+            <div class="price">15만원 <span>부터</span></div>
+            <p>조금 더 고급스러운 분위기를 원하는 분들을 위한 하이퍼블릭.</p>
+            <a class="smallCall" href="tel:01075196883">하이퍼블릭 문의하기</a>
+          </article>
+          <article class="priceCard">
+            <div class="en">GLOBAL</div><h3>다국적</h3>
+            <div class="price">10만원 <span>부터</span></div>
+            <p>다양한 분위기의 선택지를 원하는 분들을 위한 다국적 업종.</p>
+            <a class="smallCall" href="tel:01075196883">다국적 문의하기</a>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="service">
+      <div class="wrap">
+        <div class="sectionHead">
+          <small>SERVICE</small>
+          <h2>서비스 안내</h2>
+        </div>
+        <div class="serviceGrid">
+          <div class="serviceCard"><div class="big">🚘</div><strong>천안 전지역 픽업</strong><span>현재 위치와 방문 시간을 알려주세요.</span></div>
+          <div class="serviceCard"><div class="big">🎉</div><strong>생일서비스</strong><span>생일 방문 고객은 예약 시 미리 말씀해주세요.</span></div>
+          <div class="serviceCard"><div class="big">📞</div><strong>각 업종 문의</strong><span>퍼블릭 · 하이퍼블릭 · 다국적 모두 상담 가능합니다.</span></div>
+        </div>
+      </div>
+    </section>
+
+    <section id="guide">
+      <div class="wrap">
+        <div class="sectionHead">
+          <small>QUICK GUIDE</small>
+          <h2>이용은 간단하게</h2>
+        </div>
+        <div class="guide">
+          <div class="guideStep"><div class="num">01</div><strong>전화 문의</strong><span>원하는 업종·인원·시간을 말씀해주세요.</span></div>
+          <div class="guideStep"><div class="num">02</div><strong>업종 및 조건 안내</strong><span>가격과 이용 조건을 빠르게 안내받습니다.</span></div>
+          <div class="guideStep"><div class="num">03</div><strong>방문 / 픽업</strong><span>직접 방문 또는 픽업 여부를 상담합니다.</span></div>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <div class="wrap">
+        <div class="sectionHead">
+          <small>FAQ</small>
+          <h2>자주 묻는 질문</h2>
+        </div>
+        <div class="faqWrap">
+          <div class="faq"><strong>Q. 픽업 가능한가요?</strong><span>천안 전지역 픽업을 안내하고 있습니다. 위치와 시간에 따라 가능 여부를 전화로 확인해주세요.</span></div>
+          <div class="faq"><strong>Q. 생일서비스가 있나요?</strong><span>네. 예약 시 생일 방문이라고 미리 말씀해주시면 서비스 내용을 안내드립니다.</span></div>
+          <div class="faq"><strong>Q. 어떤 업종을 이용할지 모르겠어요.</strong><span>퍼블릭·하이퍼블릭·다국적 중 예산과 원하는 분위기를 말씀해주시면 맞춰 안내해드립니다.</span></div>
+          <div class="faq"><strong>Q. 정확한 이용 금액은요?</strong><span>기본 안내가는 퍼블릭 10만원, 하이퍼블릭 15만원, 다국적 10만원부터이며 상세 구성은 문의 시 확인해주세요.</span></div>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <div class="wrap">
+        <div class="cta">
+          <h2>지금 바로 문의하세요</h2>
+          <p>퍼블릭 · 하이퍼블릭 · 다국적 / 픽업 / 생일서비스</p>
+          <a class="phone" href="tel:01075196883">010-7519-6883</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="wrap">본 페이지의 세부 이용 조건 및 서비스는 상담 시 확인해주세요.</div>
+  </footer>
+
+  <a class="fixedCall" href="tel:01075196883">☎ 전화 바로걸기 · 010-7519-6883</a>
+
+  <script>
+    (function(){
+      const now = new Date();
+      const mm = String(now.getMonth()+1).padStart(2,'0');
+      const dd = String(now.getDate()).padStart(2,'0');
+      document.getElementById('todayDate').textContent = `TODAY ${mm}.${dd}`;
+
+      // Same calendar date => same values all day.
+      // Values automatically change on the next day.
+      const dateKey = Number(`${now.getFullYear()}${mm}${dd}`);
+
+      function dailyNumber(seedOffset){
+        let x = (dateKey + seedOffset * 9973) >>> 0;
+        x ^= x << 13; x ^= x >>> 17; x ^= x << 5;
+        return 10 + (Math.abs(x) % 11); // 10 ~ 20
+      }
+
+      document.getElementById('publicCount').textContent = dailyNumber(1);
+      document.getElementById('highCount').textContent = dailyNumber(2);
+      document.getElementById('globalCount').textContent = dailyNumber(3);
+    })();
+  </script>
+
+</body>
+</html>
