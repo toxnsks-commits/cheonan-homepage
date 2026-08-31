@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://천안노래방.kr/sitemap.xml
