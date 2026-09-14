@@ -1,349 +1,860 @@
-<section class="premium">
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>천안다국적노래방 | 성정동 다국적·천안다국적 이용안내</title>
+
+  <meta name="description" content="천안다국적노래방과 천안다국적 이용안내. 성정동다국적, 성정동 다국적 노래방, 두정동·불당동 다국적 관련 위치, 이용시간과 이용정보를 확인하세요.">
+
+  <meta name="keywords" content="천안다국적, 천안 다국적, 천안다국적노래방, 천안 다국적 노래방, 성정동다국적, 성정동 다국적, 성정동다국적노래방, 성정동 다국적 노래방, 천안 성정동 다국적 노래방, 두정동다국적, 두정동 다국적, 불당동다국적, 불당동 다국적, 천안유흥, 천안 유흥">
+
+  <link rel="canonical" href="https://천안노래방.kr/cheonan-multinational.html">
+
+  <meta name="robots" content="index, follow">
+
+  <meta property="og:title" content="천안다국적노래방 | 성정동 다국적·천안다국적 이용안내">
+  <meta property="og:description" content="천안다국적노래방, 천안다국적, 성정동다국적과 지역별 이용정보를 확인하세요.">
+  <meta property="og:url" content="https://천안노래방.kr/cheonan-multinational.html">
+  <meta property="og:type" content="website">
 
   <style>
-    .premium {
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      margin: 0;
+      background: #060606;
+      color: #f5f5f5;
+      font-family: "Pretendard", "Noto Sans KR", Arial, sans-serif;
+      line-height: 1.8;
+    }
+
+    .wrap {
+      max-width: 1000px;
+      margin: 0 auto;
+      padding: 18px 14px 70px;
+    }
+
+    /* ================================
+       PREMIUM TOP
+    ================================= */
+
+    .premium-showcase {
+      position: relative;
       overflow: hidden;
       border: 1px solid #a77d1f;
       border-radius: 24px;
       background:
-        radial-gradient(circle at top, rgba(218,174,72,.18), transparent 34%),
-        linear-gradient(180deg, #120d05 0%, #070707 55%, #050505 100%);
+        radial-gradient(circle at 50% 0%, rgba(220,175,70,.18), transparent 32%),
+        linear-gradient(180deg,#120d05 0%,#070707 55%,#050505 100%);
       box-shadow: 0 20px 70px rgba(0,0,0,.55);
-    }
-
-    .premium-visual {
-      padding: 34px 20px 24px;
-      text-align: center;
-    }
-
-    .premium-visual .small {
-      color: #d8ad44;
-      font-weight: 800;
-      letter-spacing: 5px;
-      font-size: 14px;
-    }
-
-    .premium-visual h2 {
-      margin: 8px 0 4px;
-      font-size: 56px;
-      line-height: 1.1;
-      color: #e6bc4e;
-      font-weight: 900;
-      letter-spacing: -3px;
-      text-shadow: 0 0 25px rgba(215,170,53,.15);
-    }
-
-    .premium-visual .sub {
       color: #fff;
-      font-weight: 700;
-      font-size: 18px;
-      letter-spacing: 2px;
     }
 
-    .girl-area {
-      margin-top: 25px;
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 12px;
+    .ps-head {
+      text-align: center;
+      padding: 30px 20px 18px;
     }
 
-    .girl-card {
-      min-height: 270px;
-      border: 1px solid #74581f;
-      border-radius: 18px;
-      overflow: hidden;
-      position: relative;
-      background:
-        linear-gradient(180deg, rgba(0,0,0,.06), rgba(0,0,0,.58)),
-        radial-gradient(circle at center, #38250f 0%, #0b0b0b 70%);
+    .ps-crown {
+      font-size: 34px;
+      color: #ddb34d;
+      line-height: 1;
     }
 
-    .girl-card img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      display: block;
-    }
-
-    .girl-label {
-      position: absolute;
-      left: 12px;
-      bottom: 12px;
-      padding: 7px 12px;
-      border-radius: 30px;
-      background: rgba(0,0,0,.72);
-      border: 1px solid rgba(220,177,70,.45);
-      color: #f0d17a;
-      font-size: 14px;
+    .ps-eyebrow {
+      color: #e2bb57;
+      letter-spacing: 5px;
+      font-size: 13px;
       font-weight: 800;
+      margin-top: 8px;
     }
 
-    .flags-row {
+    .ps-title {
+      margin: 6px 0 0;
+      font-size: 58px;
+      line-height: 1.1;
+      font-weight: 900;
+      letter-spacing: -4px;
+      color: #efc960;
+      text-shadow:
+        0 0 12px rgba(232,186,70,.22),
+        0 0 40px rgba(198,140,30,.10);
+    }
+
+    .ps-en {
+      margin-top: 6px;
+      color: #f0cd72;
+      font-size: 14px;
+      letter-spacing: 3px;
+      font-weight: 700;
+    }
+
+    .ps-flags {
       display: flex;
       justify-content: center;
       flex-wrap: wrap;
       gap: 10px;
-      margin: 22px 0 6px;
+      margin-top: 18px;
     }
 
-    .flag-pill {
-      padding: 8px 14px;
-      border-radius: 40px;
-      border: 1px solid #6d5521;
-      background: #120f09;
-      color: #eee;
-      font-size: 14px;
+    .ps-flag {
+      padding: 8px 13px;
+      border: 1px solid #6e5521;
+      border-radius: 30px;
+      background: rgba(16,13,8,.92);
+      font-size: 13px;
+      font-weight: 700;
     }
 
-    .price-box {
-      margin: 24px 20px 16px;
-      padding: 24px 18px;
-      border: 1px solid #c99829;
-      border-radius: 18px;
-      background:
-        radial-gradient(circle at 50% 0%, rgba(215,172,62,.18), transparent 45%),
-        #0d0d0d;
-      text-align: center;
-    }
+    /* 모델 이미지 */
 
-    .price-box .label {
-      color: #e7c15b;
-      font-size: 19px;
-      font-weight: 800;
-      margin-bottom: 5px;
-    }
-
-    .price-box .price {
-      font-size: 68px;
-      line-height: 1.1;
-      font-weight: 900;
-      color: #ebc357;
-      letter-spacing: -4px;
-    }
-
-    .price-box .price span {
-      color: #fff;
-      font-size: 28px;
-      letter-spacing: -1px;
-      margin-right: 6px;
-    }
-
-    .benefit-grid {
+    .ps-models {
       display: grid;
-      grid-template-columns: repeat(4, 1fr);
+      grid-template-columns: 1fr 1fr;
       gap: 10px;
       padding: 0 20px 20px;
     }
 
-    .benefit-card {
-      min-height: 120px;
-      border-radius: 14px;
-      border: 1px solid #4d3a18;
+    .ps-model {
+      position: relative;
+      height: 360px;
+      overflow: hidden;
+      border: 1px solid #5b4318;
+      border-radius: 18px;
       background: #111;
-      text-align: center;
-      padding: 18px 10px;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
     }
 
-    .benefit-card .emoji {
-      font-size: 28px;
+    .ps-model img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center top;
+      display: block;
+    }
+
+    .ps-model::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background:
+        linear-gradient(
+          180deg,
+          transparent 55%,
+          rgba(0,0,0,.45) 82%,
+          rgba(0,0,0,.75)
+        );
+      pointer-events: none;
+    }
+
+    .ps-model-label {
+      position: absolute;
+      z-index: 2;
+      bottom: 12px;
+      left: 50%;
+      transform: translateX(-50%);
+      padding: 6px 14px;
+      border: 1px solid rgba(223,183,81,.45);
+      border-radius: 30px;
+      background: rgba(0,0,0,.66);
+      color: #f1d17a;
+      font-size: 13px;
+      font-weight: 800;
+      white-space: nowrap;
+    }
+
+    /* 가격 */
+
+    .ps-price {
+      margin: 4px 20px 12px;
+      padding: 25px 20px;
+      border: 1px solid #d5a638;
+      border-radius: 20px;
+      background:
+        radial-gradient(circle at top, rgba(235,190,77,.12), transparent 45%),
+        #0d0d0d;
+      text-align: center;
+    }
+
+    .ps-price-label {
+      color: #e8c45f;
+      font-size: 20px;
+      font-weight: 800;
+    }
+
+    .ps-price-value {
+      font-size: 68px;
+      line-height: 1.08;
+      font-weight: 900;
+      color: #efc95f;
+      letter-spacing: -5px;
+      margin-top: 3px;
+    }
+
+    .ps-price-value span {
+      font-size: 29px;
+      color: #fff;
+      letter-spacing: -1px;
+      margin-right: 7px;
+    }
+
+    /* 혜택 */
+
+    .ps-benefits {
+      display: grid;
+      grid-template-columns: repeat(4,1fr);
+      gap: 10px;
+      padding: 0 20px 18px;
+    }
+
+    .ps-benefit {
+      min-height: 125px;
+      border: 1px solid #4e3b18;
+      border-radius: 16px;
+      background: #101010;
+      padding: 16px 8px;
+      text-align: center;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .ps-benefit .emoji {
+      font-size: 32px;
       margin-bottom: 5px;
     }
 
-    .benefit-card strong {
-      color: #efcf74;
-      font-size: 16px;
+    .ps-benefit strong {
+      color: #efcf77;
+      font-size: 17px;
+      line-height: 1.4;
     }
 
-    .benefit-card small {
-      color: #aaa;
-      margin-top: 2px;
+    .ps-benefit small {
+      margin-top: 3px;
+      color: #c7c7c7;
       font-size: 13px;
     }
 
-    .main-cta {
+    /* 전화문의 */
+
+    .ps-call {
       display: block;
-      margin: 8px 20px 24px;
-      padding: 19px 20px;
+      margin: 10px 24px 20px;
+      padding: 20px 18px;
       border-radius: 50px;
       text-align: center;
       text-decoration: none;
-      font-weight: 900;
-      font-size: 20px;
       color: #080808;
-      background: linear-gradient(135deg, #f0ce68, #b68420);
-      box-shadow: 0 10px 35px rgba(205,160,51,.18);
+      font-size: 22px;
+      font-weight: 900;
+      background: linear-gradient(135deg,#f0cf6e,#b98522);
+      box-shadow:
+        0 0 0 1px rgba(255,224,131,.28),
+        0 12px 35px rgba(205,160,51,.22);
     }
 
-    .service-grid {
+    .ps-call:hover {
+      transform: translateY(-2px);
+    }
+
+    /* 하단 서비스 */
+
+    .ps-services {
       display: grid;
-      grid-template-columns: repeat(4, 1fr);
+      grid-template-columns: repeat(4,1fr);
       gap: 10px;
       padding: 0 20px 24px;
     }
 
-    .service-card {
-      border: 1px solid #3e3218;
+    .ps-service {
+      border: 1px solid #403216;
       border-radius: 14px;
-      padding: 16px 8px;
-      text-align: center;
       background: #0e0e0e;
-      font-size: 13px;
+      padding: 14px 8px;
+      text-align: center;
       color: #ddd;
+      font-size: 13px;
     }
 
-    .service-card b {
+    .ps-service b {
       display: block;
-      color: #ebc65c;
+      color: #ebc861;
       font-size: 15px;
       margin-bottom: 2px;
     }
 
+    .ps-bottom {
+      text-align: center;
+      padding: 8px 10px 26px;
+      color: #8e7540;
+      letter-spacing: 4px;
+      font-size: 11px;
+    }
+
+    /* ================================
+       SEO CONTENT
+    ================================= */
+
+    .hero {
+      margin-top: 28px;
+      text-align: center;
+      padding: 38px 20px;
+      border: 1px solid #5d4d28;
+      border-radius: 18px;
+      background:
+        radial-gradient(circle at top, #241c09 0%, #100d07 35%, #080808 70%);
+    }
+
+    .gold {
+      color: #d7b65a;
+    }
+
+    h1 {
+      margin: 8px 0 15px;
+      font-size: 30px;
+      line-height: 1.35;
+    }
+
+    .hero p {
+      max-width: 700px;
+      margin: 0 auto;
+      color: #bdbdbd;
+      font-size: 15px;
+    }
+
+    .section {
+      margin-top: 22px;
+      padding: 26px;
+      border: 1px solid #292929;
+      border-radius: 16px;
+      background: #0e0e0e;
+    }
+
+    h2 {
+      margin-top: 0;
+      color: #d5b966;
+      font-size: 22px;
+    }
+
+    h3 {
+      color: #ead798;
+      margin-bottom: 5px;
+      font-size: 18px;
+    }
+
+    .section p {
+      font-size: 15px;
+      color: #c9c9c9;
+    }
+
+    .card {
+      margin: 15px 0;
+      padding: 16px 18px;
+      border-left: 3px solid #9e843f;
+      background: #151515;
+      border-radius: 8px;
+    }
+
+    .nav {
+      margin-top: 25px;
+      text-align: center;
+    }
+
+    .nav a {
+      display: inline-block;
+      margin: 5px;
+      padding: 10px 16px;
+      border: 1px solid #786224;
+      border-radius: 30px;
+      color: #d7bd72;
+      text-decoration: none;
+      font-size: 14px;
+    }
+
+    .nav a:hover {
+      background: #b89139;
+      color: #080808;
+    }
+
+    .home {
+      display: block;
+      width: fit-content;
+      margin: 35px auto 0;
+      padding: 13px 28px;
+      background: linear-gradient(135deg, #d4af37, #8f6c18);
+      color: #080808;
+      text-decoration: none;
+      font-weight: 800;
+      border-radius: 30px;
+    }
+
+    footer {
+      text-align: center;
+      color: #666;
+      font-size: 13px;
+      margin-top: 45px;
+    }
+
+    /* MOBILE */
+
     @media (max-width: 700px) {
-      .premium-visual h2 {
-        font-size: 42px;
+
+      .wrap {
+        padding: 10px 10px 60px;
       }
 
-      .girl-area {
-        grid-template-columns: 1fr 1fr;
+      .ps-head {
+        padding: 25px 12px 15px;
       }
 
-      .girl-card {
-        min-height: 210px;
+      .ps-title {
+        font-size: 43px;
       }
 
-      .price-box .price {
-        font-size: 52px;
+      .ps-en {
+        font-size: 11px;
+        letter-spacing: 2px;
       }
 
-      .price-box .price span {
-        font-size: 23px;
+      .ps-flags {
+        gap: 7px;
       }
 
-      .benefit-grid {
-        grid-template-columns: repeat(2, 1fr);
+      .ps-flag {
+        padding: 6px 9px;
+        font-size: 12px;
       }
 
-      .service-grid {
-        grid-template-columns: repeat(2, 1fr);
+      .ps-models {
+        gap: 6px;
+        padding: 0 10px 15px;
       }
 
-      .main-cta {
+      .ps-model {
+        height: 250px;
+        border-radius: 12px;
+      }
+
+      .ps-model-label {
+        font-size: 11px;
+        padding: 5px 10px;
+      }
+
+      .ps-price {
+        margin: 0 10px 10px;
+        padding: 21px 10px;
+      }
+
+      .ps-price-label {
         font-size: 17px;
+      }
+
+      .ps-price-value {
+        font-size: 49px;
+      }
+
+      .ps-price-value span {
+        font-size: 22px;
+      }
+
+      .ps-benefits {
+        grid-template-columns: repeat(2,1fr);
+        gap: 7px;
+        padding: 0 10px 14px;
+      }
+
+      .ps-benefit {
+        min-height: 105px;
+        padding: 12px 6px;
+      }
+
+      .ps-benefit .emoji {
+        font-size: 26px;
+      }
+
+      .ps-benefit strong {
+        font-size: 15px;
+      }
+
+      .ps-call {
+        margin: 7px 10px 16px;
+        font-size: 18px;
+        padding: 17px 10px;
+      }
+
+      .ps-services {
+        grid-template-columns: repeat(2,1fr);
+        gap: 7px;
+        padding: 0 10px 20px;
+      }
+
+      .section {
+        padding: 21px 17px;
+      }
+
+      h1 {
+        font-size: 25px;
       }
     }
   </style>
+</head>
 
+<body>
 
-  <div class="premium-visual">
+<div class="wrap">
 
-    <div class="small">CHEONAN PREMIUM</div>
+  <!-- =====================================
+       PREMIUM LANDING
+  ====================================== -->
 
-    <h2>천안다국적</h2>
+  <section class="premium-showcase">
 
-    <div class="sub">
-      PREMIUM MULTINATIONAL KARAOKE
-    </div>
+    <div class="ps-head">
 
+      <div class="ps-crown">♛</div>
 
-    <div class="flags-row">
-      <div class="flag-pill">🇹🇭 태국</div>
-      <div class="flag-pill">🇻🇳 베트남</div>
-      <div class="flag-pill">🇨🇳 중국</div>
-      <div class="flag-pill">🌏 다양한 국적</div>
-    </div>
-
-
-    <!-- 여자 이미지 영역 -->
-    <div class="girl-area">
-
-      <div class="girl-card">
-        <img src="/images/multinational-girl1.jpg" alt="천안다국적 프리미엄 안내 이미지">
-        <div class="girl-label">PREMIUM</div>
+      <div class="ps-eyebrow">
+        CHEONAN PREMIUM
       </div>
 
-      <div class="girl-card">
-        <img src="/images/multinational-girl2.jpg" alt="천안다국적 안내 이미지">
-        <div class="girl-label">MULTINATIONAL</div>
+      <div class="ps-title">
+        천안다국적
+      </div>
+
+      <div class="ps-en">
+        PREMIUM MULTINATIONAL KARAOKE
+      </div>
+
+      <div class="ps-flags">
+        <div class="ps-flag">🇹🇭 태국</div>
+        <div class="ps-flag">🇻🇳 베트남</div>
+        <div class="ps-flag">🇨🇳 중국</div>
+        <div class="ps-flag">🌏 다양한 국적</div>
       </div>
 
     </div>
 
-  </div>
 
+    <!-- 모델 이미지 -->
 
-  <div class="price-box">
+    <div class="ps-models">
 
-    <div class="label">
-      프리미엄 다국적
+      <div class="ps-model">
+        <img
+          src="/images/girl-left.jpg"
+          alt="천안다국적 프리미엄 안내 이미지"
+        >
+        <div class="ps-model-label">
+          PREMIUM
+        </div>
+      </div>
+
+      <div class="ps-model">
+        <img
+          src="/images/girl-right.jpg"
+          alt="천안다국적 안내 이미지"
+        >
+        <div class="ps-model-label">
+          MULTINATIONAL
+        </div>
+      </div>
+
     </div>
 
-    <div class="price">
-      <span>인당</span>10만원
+
+    <!-- 가격 -->
+
+    <div class="ps-price">
+
+      <div class="ps-price-label">
+        프리미엄 다국적
+      </div>
+
+      <div class="ps-price-value">
+        <span>인당</span>10만원
+      </div>
+
     </div>
 
-  </div>
 
+    <!-- 혜택 -->
 
-  <div class="benefit-grid">
+    <div class="ps-benefits">
 
-    <div class="benefit-card">
-      <div class="emoji">🍻</div>
-      <strong>소주 · 맥주</strong>
-      <small>무제한</small>
+      <div class="ps-benefit">
+        <div class="emoji">🍻</div>
+        <strong>소주 · 맥주</strong>
+        <small>무제한</small>
+      </div>
+
+      <div class="ps-benefit">
+        <div class="emoji">🍽️</div>
+        <strong>안주</strong>
+        <small>무제한</small>
+      </div>
+
+      <div class="ps-benefit">
+        <div class="emoji">🥤</div>
+        <strong>음료</strong>
+        <small>무제한</small>
+      </div>
+
+      <div class="ps-benefit">
+        <div class="emoji">🚫</div>
+        <strong>룸티 X</strong>
+        <small>추가비용 없음</small>
+      </div>
+
     </div>
 
-    <div class="benefit-card">
-      <div class="emoji">🍽️</div>
-      <strong>안주</strong>
-      <small>무제한</small>
+
+    <!-- 전화 문의 -->
+
+    <a class="ps-call" href="tel:01075196883">
+      📞 010-7519-6883 문의하기
+    </a>
+
+
+    <!-- 기타 서비스 -->
+
+    <div class="ps-services">
+
+      <div class="ps-service">
+        <b>🚗 픽업</b>
+        천안 전지역
+      </div>
+
+      <div class="ps-service">
+        <b>🎂 생일</b>
+        이벤트 안내
+      </div>
+
+      <div class="ps-service">
+        <b>💎 프리미엄</b>
+        이용 안내
+      </div>
+
+      <div class="ps-service">
+        <b>🕒 상담</b>
+        이용 문의
+      </div>
+
     </div>
 
-    <div class="benefit-card">
-      <div class="emoji">🥤</div>
-      <strong>음료</strong>
-      <small>무제한</small>
+    <div class="ps-bottom">
+      CHEONAN PREMIUM MULTINATIONAL
     </div>
 
-    <div class="benefit-card">
-      <div class="emoji">🚫</div>
-      <strong>룸티 X</strong>
-      <small>추가비용 없음</small>
+  </section>
+
+
+  <!-- =====================================
+       기존 SEO 영역
+  ====================================== -->
+
+  <header class="hero">
+
+    <div class="gold">
+      CHEONAN MULTINATIONAL GUIDE
     </div>
 
-  </div>
+    <h1>
+      천안다국적노래방 · 천안다국적<br>
+      <span class="gold">
+        성정동 다국적 이용안내
+      </span>
+    </h1>
+
+    <p>
+      천안다국적노래방을 찾는 분들을 위해
+      성정동 다국적을 중심으로 위치, 이용시간,
+      이용 방식과 지역별 정보를 정리했습니다.
+    </p>
+
+  </header>
 
 
-  <a class="main-cta" href="/">
-    천안 전체 업종 · 이용안내 보기 →
+  <section class="section">
+
+    <h2>
+      천안다국적노래방 이용안내
+    </h2>
+
+    <p>
+      천안유흥 관련 정보를 찾으면서 천안다국적 또는
+      천안다국적노래방을 알아보는 경우가 있습니다.
+      이용 조건은 위치, 시간, 인원과 업소별 운영 방식에 따라
+      달라질 수 있으므로 방문 전 필요한 정보를 확인하는 것이 좋습니다.
+    </p>
+
+    <div class="card">
+
+      <h3>
+        성정동 다국적 노래방
+      </h3>
+
+      <p>
+        성정동다국적과 성정동 다국적 노래방을 찾는 경우
+        위치와 접근성, 이용시간과 이용 조건을 함께 확인하면
+        원하는 조건에 맞는 곳을 찾기 쉽습니다.
+      </p>
+
+    </div>
+
+
+    <div class="card">
+
+      <h3>
+        두정동 다국적
+      </h3>
+
+      <p>
+        두정동다국적 관련 정보를 찾는 경우
+        이동거리와 운영시간, 이용 가능 여부 등을 확인하고
+        성정동 지역과 함께 비교해볼 수 있습니다.
+      </p>
+
+    </div>
+
+
+    <div class="card">
+
+      <h3>
+        불당동 다국적
+      </h3>
+
+      <p>
+        불당동다국적 관련 정보를 알아보는 경우에도
+        위치와 이용시간, 운영 여부 등 필요한 정보를
+        방문 전에 확인하는 것이 좋습니다.
+      </p>
+
+    </div>
+
+  </section>
+
+
+  <section class="section">
+
+    <h2>
+      천안다국적 이용지역 안내
+    </h2>
+
+    <p>
+      천안에서는 성정동다국적을 비롯해 두정동다국적,
+      불당동다국적 등 지역명을 함께 검색해
+      관련 정보를 찾는 경우가 있습니다.
+    </p>
+
+    <p>
+      특히 천안 성정동 다국적 노래방을 찾는 경우
+      원하는 위치와 이동거리, 이용시간과 운영 정보를
+      함께 확인하면 이용하기 편리합니다.
+    </p>
+
+  </section>
+
+
+  <section class="section">
+
+    <h2>
+      천안다국적노래방 이용 전 확인사항
+    </h2>
+
+    <p>
+      천안다국적노래방은 이용 시간과 운영 방식,
+      서비스 구성 등에 따라 이용 조건이 달라질 수 있습니다.
+      방문 전에 정확한 이용 가능 여부와 필요한 정보를
+      확인하는 것이 좋습니다.
+    </p>
+
+
+    <div class="card">
+
+      <h3>
+        위치와 이용시간 확인
+      </h3>
+
+      <p>
+        성정동 다국적 노래방을 비롯한 관련 정보를 찾을 때는
+        원하는 지역과 실제 이동거리, 이용 가능한 시간대를
+        함께 확인하면 편리합니다.
+      </p>
+
+    </div>
+
+
+    <div class="card">
+
+      <h3>
+        이용 조건 확인
+      </h3>
+
+      <p>
+        이용 조건은 업소와 시간대에 따라 차이가 있을 수 있으므로
+        이용 전 운영 여부와 관련 정보를 확인해보세요.
+      </p>
+
+    </div>
+
+  </section>
+
+
+  <section class="section">
+
+    <h2>
+      천안유흥 관련 업종 안내
+    </h2>
+
+    <p>
+      천안유흥 관련 정보를 찾는 경우 다국적 노래방 외에도
+      노래방, 노래클럽, 가라오케, 하이퍼블릭 등
+      여러 형태의 관련 정보를 확인할 수 있습니다.
+    </p>
+
+
+    <div class="nav">
+
+      <a href="/cheonan-noraebang.html">
+        천안노래방 안내
+      </a>
+
+      <a href="/cheonanclub.html">
+        천안노래클럽 안내
+      </a>
+
+      <a href="/cheonankaraoke.html">
+        천안가라오케 안내
+      </a>
+
+      <a href="/cheonanhapeo.html">
+        천안하퍼·천안하이퍼블릭 안내
+      </a>
+
+    </div>
+
+  </section>
+
+
+  <a class="home" href="/">
+    ← 천안유흥 메인페이지로 돌아가기
   </a>
 
 
-  <div class="service-grid">
+  <footer>
+    © 천안노래방.kr
+  </footer>
 
-    <div class="service-card">
-      <b>🚗 픽업</b>
-      천안 전지역
-    </div>
+</div>
 
-    <div class="service-card">
-      <b>🎂 생일</b>
-      이벤트 안내
-    </div>
-
-    <div class="service-card">
-      <b>💎 프리미엄</b>
-      이용 안내
-    </div>
-
-    <div class="service-card">
-      <b>🕒 상담</b>
-      이용문의
-    </div>
-
-  </div>
-
-</section>
+</body>
+</html>
