@@ -18,1448 +18,1000 @@
   <meta property="og:url" content="https://천안노래방.kr/cheonan-multinational.html">
   <meta property="og:type" content="website">
 
-<style>
-
-/* ===============================
-   BASIC
-================================ */
-
-*{
-  box-sizing:border-box;
-}
-
-html{
-  scroll-behavior:smooth;
-}
-
-body{
-  margin:0;
-  background:#050505;
-  color:#f5f5f5;
-  font-family:"Pretendard","Noto Sans KR",Arial,sans-serif;
-  line-height:1.8;
-}
-
-.wrap{
-  max-width:1000px;
-  margin:0 auto;
-  padding:16px 12px 70px;
-}
-
-
-/* ===============================
-   PREMIUM POSTER
-================================ */
-
-.multi-poster{
-  position:relative;
-  overflow:hidden;
-  border:1px solid #b88b28;
-  border-radius:22px;
-
-  background:
-    radial-gradient(
-      circle at 50% 5%,
-      rgba(220,171,56,.22),
-      transparent 32%
-    ),
-    #050505;
-
-  box-shadow:0 20px 70px rgba(0,0,0,.7);
-}
-
-
-/* ===============================
-   HERO
-================================ */
-
-.poster-hero{
-  position:relative;
-  height:610px;
-  overflow:hidden;
-}
-
-
-/* 모델 */
-
-.poster-girl{
-  position:absolute;
-  top:0;
-  bottom:0;
-  width:48%;
-}
-
-.poster-girl.left{
-  left:0;
-}
-
-.poster-girl.right{
-  right:0;
-}
-
-.poster-girl img{
-  width:100%;
-  height:100%;
-  display:block;
-
-  object-fit:cover;
-  object-position:center top;
-}
-
-
-/* 가운데로 갈수록 어둡게 */
-
-.poster-girl.left:after{
-  content:"";
-  position:absolute;
-  inset:0;
-
-  background:
-    linear-gradient(
-      90deg,
-      rgba(0,0,0,.03) 0%,
-      rgba(0,0,0,.10) 45%,
-      rgba(5,5,5,.94) 100%
-    );
-}
-
-.poster-girl.right:after{
-  content:"";
-  position:absolute;
-  inset:0;
-
-  background:
-    linear-gradient(
-      270deg,
-      rgba(0,0,0,.03) 0%,
-      rgba(0,0,0,.10) 45%,
-      rgba(5,5,5,.94) 100%
-    );
-}
-
-
-/* 하단 그라데이션 */
-
-.poster-hero:after{
-  content:"";
-  position:absolute;
-
-  left:0;
-  right:0;
-  bottom:0;
-
-  height:45%;
-
-  background:
-    linear-gradient(
-      transparent,
-      rgba(5,5,5,.68) 45%,
-      #050505 100%
-    );
-
-  z-index:1;
-  pointer-events:none;
-}
-
-
-/* ===============================
-   중앙 내용
-================================ */
-
-.poster-center{
-  position:relative;
-  z-index:3;
-
-  width:56%;
-  max-width:550px;
-
-  margin:0 auto;
-  padding:38px 8px 10px;
-
-  text-align:center;
-}
-
-
-.poster-crown{
-  color:#efc45a;
-  font-size:36px;
-  line-height:1;
-}
-
-
-.poster-premium{
-  margin-top:8px;
-
-  color:#e8bd53;
-
-  letter-spacing:7px;
-
-  font-size:13px;
-  font-weight:900;
-}
-
-
-.poster-copy{
-  margin-top:13px;
-
-  color:#eee;
-
-  font-size:14px;
-  font-weight:600;
-}
-
-
-.poster-title{
-  margin:0;
-
-  color:#f1c75a;
-
-  font-size:67px;
-  line-height:1.1;
-
-  font-weight:950;
-
-  letter-spacing:-5px;
-
-  text-shadow:
-    0 2px 2px #000,
-    0 0 25px rgba(238,185,59,.25);
-}
-
-
-.poster-eng{
-  margin-top:3px;
-
-  color:#e9c463;
-
-  font-size:12px;
-
-  letter-spacing:3px;
-
-  font-weight:800;
-}
-
-
-/* ===============================
-   국적
-================================ */
-
-.poster-flags{
-  display:flex;
-
-  justify-content:center;
-
-  flex-wrap:wrap;
-
-  gap:6px;
-
-  margin-top:16px;
-}
-
-
-.poster-flag{
-  padding:6px 10px;
-
-  border:1px solid rgba(218,172,64,.6);
-
-  border-radius:30px;
-
-  background:rgba(0,0,0,.78);
-
-  color:#fff;
-
-  font-size:11px;
-
-  font-weight:800;
-}
-
-
-.poster-message{
-  margin-top:13px;
-
-  color:#e6b94d;
-
-  font-size:16px;
-
-  font-weight:800;
-
-  letter-spacing:1px;
-}
-
-
-/* ===============================
-   PRICE
-================================ */
-
-.poster-price{
-  position:absolute;
-
-  z-index:4;
-
-  left:50%;
-  bottom:28px;
-
-  transform:translateX(-50%);
-
-  width:61%;
-  max-width:580px;
-
-  padding:18px 12px;
-
-  text-align:center;
-
-  border:1px solid #e2b347;
-
-  border-radius:22px;
-
-  background:
-    radial-gradient(
-      circle at top,
-      rgba(219,169,50,.18),
-      transparent 50%
-    ),
-    rgba(5,5,5,.93);
-
-  box-shadow:
-    0 0 35px rgba(209,156,38,.13),
-    inset 0 0 25px rgba(255,215,102,.04);
-}
-
-
-.poster-price-label{
-  color:#e7bd54;
-
-  font-size:18px;
-
-  font-weight:900;
-}
-
-
-.poster-price-main{
-  margin-top:-3px;
-
-  color:#f3cb63;
-
-  font-size:64px;
-
-  line-height:1.1;
-
-  font-weight:950;
-
-  letter-spacing:-5px;
-}
-
-
-.poster-price-main span{
-  margin-right:8px;
-
-  color:#fff;
-
-  font-size:26px;
-
-  letter-spacing:-1px;
-}
-
-
-/* ===============================
-   BENEFITS
-================================ */
-
-.poster-benefits{
-  position:relative;
-  z-index:3;
-
-  display:grid;
-
-  grid-template-columns:repeat(4,1fr);
-
-  gap:8px;
-
-  padding:7px 18px 17px;
-}
-
-
-.poster-benefit{
-  min-height:112px;
-
-  padding:14px 5px;
-
-  display:flex;
-
-  flex-direction:column;
-
-  align-items:center;
-
-  justify-content:center;
-
-  text-align:center;
-
-  border:1px solid #59421a;
-
-  border-radius:14px;
-
-  background:
-    linear-gradient(
-      180deg,
-      #141414,
-      #0b0b0b
-    );
-}
-
-
-.poster-benefit .ico{
-  margin-bottom:6px;
-
-  font-size:29px;
-
-  line-height:1;
-}
-
-
-.poster-benefit b{
-  color:#edc861;
-
-  font-size:16px;
-}
-
-
-.poster-benefit span{
-  margin-top:2px;
-
-  color:#ddd;
-
-  font-size:13px;
-}
-
-
-/* ===============================
-   CALL BUTTON
-================================ */
-
-.poster-call{
-  position:relative;
-  z-index:3;
-
-  display:block;
-
-  margin:3px 26px 18px;
-
-  padding:19px 14px;
-
-  border-radius:50px;
-
-  background:
-    linear-gradient(
-      135deg,
-      #f5d36e,
-      #b67e18
-    );
-
-  color:#050505;
-
-  text-decoration:none;
-
-  text-align:center;
-
-  font-size:22px;
-
-  font-weight:950;
-
-  box-shadow:
-    0 8px 30px rgba(215,166,48,.25);
-}
-
-
-.poster-call:hover{
-  transform:translateY(-2px);
-}
-
-
-/* ===============================
-   SERVICES
-================================ */
-
-.poster-services{
-  position:relative;
-  z-index:3;
-
-  display:grid;
-
-  grid-template-columns:repeat(4,1fr);
-
-  gap:8px;
-
-  padding:0 18px 20px;
-}
-
-
-.poster-service{
-  padding:13px 5px;
-
-  text-align:center;
-
-  border:1px solid #493716;
-
-  border-radius:13px;
-
-  background:#0d0d0d;
-
-  color:#ddd;
-
-  font-size:12px;
-}
-
-
-.poster-service strong{
-  display:block;
-
-  margin-bottom:2px;
-
-  color:#ebc65e;
-
-  font-size:14px;
-}
-
-
-.poster-footer{
-  padding:5px 10px 20px;
-
-  text-align:center;
-
-  color:#9a7b39;
-
-  font-size:10px;
-
-  letter-spacing:5px;
-}
-
-
-/* ===============================
-   SEO AREA
-================================ */
-
-.seo-hero{
-  margin-top:25px;
-
-  padding:35px 20px;
-
-  text-align:center;
-
-  border:1px solid #514321;
-
-  border-radius:17px;
-
-  background:
-    radial-gradient(
-      circle at top,
-      #211a09 0%,
-      #0d0b06 40%,
-      #080808 75%
-    );
-}
-
-
-.gold{
-  color:#d7b65a;
-}
-
-
-h1{
-  margin:7px 0 12px;
-
-  font-size:29px;
-
-  line-height:1.4;
-}
-
-
-.seo-hero p{
-  max-width:700px;
-
-  margin:0 auto;
-
-  color:#bbb;
-
-  font-size:14px;
-}
-
-
-.section{
-  margin-top:20px;
-
-  padding:25px;
-
-  border:1px solid #292929;
-
-  border-radius:15px;
-
-  background:#0e0e0e;
-}
-
-
-h2{
-  margin-top:0;
-
-  color:#d5b966;
-
-  font-size:22px;
-}
-
-
-h3{
-  margin-bottom:5px;
-
-  color:#ead798;
-
-  font-size:18px;
-}
-
-
-.section p{
-  color:#c9c9c9;
-
-  font-size:14px;
-}
-
-
-.card{
-  margin:14px 0;
-
-  padding:15px 17px;
-
-  border-left:3px solid #9e843f;
-
-  border-radius:8px;
-
-  background:#151515;
-}
-
-
-/* 내부 링크 */
-
-.nav{
-  margin-top:23px;
-
-  text-align:center;
-}
-
-
-.nav a{
-  display:inline-block;
-
-  margin:5px;
-
-  padding:9px 15px;
-
-  border:1px solid #786224;
-
-  border-radius:30px;
-
-  color:#d7bd72;
-
-  text-decoration:none;
-
-  font-size:13px;
-}
-
-
-.nav a:hover{
-  background:#b89139;
-
-  color:#080808;
-}
-
-
-/* 메인 */
-
-.home{
-  display:block;
-
-  width:fit-content;
-
-  margin:32px auto 0;
-
-  padding:12px 25px;
-
-  border-radius:30px;
-
-  background:
-    linear-gradient(
-      135deg,
-      #d4af37,
-      #8f6c18
-    );
-
-  color:#080808;
-
-  text-decoration:none;
-
-  font-weight:800;
-}
-
-
-footer{
-  margin-top:40px;
-
-  text-align:center;
-
-  color:#666;
-
-  font-size:12px;
-}
-
-
-/* ===============================
-   MOBILE
-================================ */
-
-@media(max-width:650px){
-
-  .wrap{
-    padding:8px 7px 55px;
-  }
-
-  .multi-poster{
-    border-radius:13px;
-  }
-
-  .poster-hero{
-    height:500px;
-  }
-
-  .poster-girl{
-    width:58%;
-  }
-
-  .poster-girl.left{
-    left:-10%;
-  }
-
-  .poster-girl.right{
-    right:-10%;
-  }
-
-  .poster-center{
-    width:78%;
-
-    padding-top:24px;
-  }
-
-  .poster-crown{
-    font-size:27px;
-  }
-
-  .poster-premium{
-    margin-top:5px;
-
-    font-size:9px;
-
-    letter-spacing:5px;
-  }
-
-  .poster-copy{
-    margin-top:8px;
-
-    font-size:11px;
-  }
-
-  .poster-title{
-    font-size:45px;
-
-    letter-spacing:-4px;
-  }
-
-  .poster-eng{
-    font-size:8px;
-
-    letter-spacing:1.7px;
-  }
-
-  .poster-flags{
-    margin-top:11px;
-
-    gap:4px;
-  }
-
-  .poster-flag{
-    padding:4px 7px;
-
-    font-size:9px;
-  }
-
-  .poster-message{
-    margin-top:8px;
-
-    font-size:12px;
-  }
-
-  .poster-price{
-    width:78%;
-
-    bottom:18px;
-
-    padding:14px 6px;
-  }
-
-  .poster-price-label{
-    font-size:14px;
-  }
-
-  .poster-price-main{
-    font-size:47px;
-  }
-
-  .poster-price-main span{
-    margin-right:5px;
-
-    font-size:19px;
-  }
-
-  .poster-benefits{
-    gap:4px;
-
-    padding:4px 6px 11px;
-  }
-
-  .poster-benefit{
-    min-height:88px;
-
-    padding:8px 2px;
-  }
-
-  .poster-benefit .ico{
-    margin-bottom:4px;
-
-    font-size:22px;
-  }
-
-  .poster-benefit b{
-    font-size:11px;
-  }
-
-  .poster-benefit span{
-    font-size:9px;
-  }
-
-  .poster-call{
-    margin:2px 8px 12px;
-
-    padding:15px 7px;
-
-    font-size:17px;
-  }
-
-  .poster-services{
-    gap:4px;
-
-    padding:0 6px 15px;
-  }
-
-  .poster-service{
-    padding:9px 2px;
-
-    font-size:8px;
-  }
-
-  .poster-service strong{
-    font-size:10px;
-  }
-
-  .poster-footer{
-    padding-bottom:16px;
-
-    font-size:8px;
-
-    letter-spacing:3px;
-  }
-
-  .seo-hero{
-    padding:28px 15px;
-  }
-
-  h1{
-    font-size:23px;
-  }
-
-  .section{
-    padding:20px 15px;
-  }
-}
-
-</style>
+  <style>
+    *{
+      box-sizing:border-box;
+    }
+
+    html{
+      scroll-behavior:smooth;
+    }
+
+    body{
+      margin:0;
+      background:#050505;
+      color:#f5f5f5;
+      font-family:"Pretendard","Noto Sans KR",Arial,sans-serif;
+      line-height:1.8;
+    }
+
+    .wrap{
+      max-width:1000px;
+      margin:0 auto;
+      padding:16px 12px 70px;
+    }
+
+    /* =========================
+       PREMIUM POSTER
+    ========================= */
+
+    .multi-poster{
+      position:relative;
+      overflow:hidden;
+      border:1px solid #b88b28;
+      border-radius:22px;
+      background:
+        radial-gradient(circle at 50% 5%,rgba(220,171,56,.22),transparent 32%),
+        #050505;
+      box-shadow:0 20px 70px rgba(0,0,0,.7);
+    }
+
+    .poster-hero{
+      position:relative;
+      height:520px;
+      overflow:hidden;
+    }
+
+    /* 모델 이미지 */
+
+    .poster-girl{
+      position:absolute;
+      top:0;
+      bottom:0;
+      width:48%;
+    }
+
+    .poster-girl.left{
+      left:0;
+    }
+
+    .poster-girl.right{
+      right:0;
+    }
+
+    .poster-girl img{
+      width:100%;
+      height:100%;
+      display:block;
+      object-fit:cover;
+      object-position:center 15%;
+    }
+
+    /* 사진 중앙 그라데이션 */
+
+    .poster-girl.left:after{
+      content:"";
+      position:absolute;
+      inset:0;
+      background:
+        linear-gradient(
+          90deg,
+          rgba(0,0,0,.02) 0%,
+          rgba(0,0,0,.08) 42%,
+          rgba(5,5,5,.90) 100%
+        );
+    }
+
+    .poster-girl.right:after{
+      content:"";
+      position:absolute;
+      inset:0;
+      background:
+        linear-gradient(
+          270deg,
+          rgba(0,0,0,.02) 0%,
+          rgba(0,0,0,.08) 42%,
+          rgba(5,5,5,.90) 100%
+        );
+    }
+
+    /* 사진 아래쪽 그라데이션 */
+
+    .poster-hero:after{
+      content:"";
+      position:absolute;
+      left:0;
+      right:0;
+      bottom:0;
+      height:45%;
+      background:
+        linear-gradient(
+          transparent,
+          rgba(5,5,5,.65) 45%,
+          #050505 100%
+        );
+      z-index:1;
+      pointer-events:none;
+    }
+
+    /* 중앙 제목 */
+
+    .poster-center{
+      position:relative;
+      z-index:3;
+      width:56%;
+      max-width:550px;
+      margin:0 auto;
+      padding:30px 8px 10px;
+      text-align:center;
+    }
+
+    .poster-center::before{
+      content:"";
+      position:absolute;
+      z-index:-1;
+      top:5px;
+      left:50%;
+      transform:translateX(-50%);
+      width:125%;
+      height:330px;
+      background:
+        radial-gradient(
+          ellipse at center,
+          rgba(0,0,0,.72) 0%,
+          rgba(0,0,0,.48) 42%,
+          rgba(0,0,0,0) 75%
+        );
+      pointer-events:none;
+    }
+
+    .poster-crown{
+      color:#efc45a;
+      font-size:34px;
+      line-height:1;
+    }
+
+    .poster-premium{
+      margin-top:6px;
+      color:#e8bd53;
+      letter-spacing:7px;
+      font-size:13px;
+      font-weight:900;
+    }
+
+    .poster-copy{
+      margin-top:9px;
+      color:#fff;
+      font-size:14px;
+      font-weight:700;
+    }
+
+    .poster-title{
+      margin:0;
+      color:#f1c75a;
+      font-size:64px;
+      line-height:1.08;
+      font-weight:950;
+      letter-spacing:-5px;
+      text-shadow:
+        0 3px 3px rgba(0,0,0,.95),
+        0 0 12px rgba(0,0,0,.9),
+        0 0 30px rgba(238,185,59,.28);
+    }
+
+    .poster-eng{
+      margin-top:3px;
+      color:#e9c463;
+      font-size:12px;
+      letter-spacing:3px;
+      font-weight:800;
+    }
+
+    .poster-premium,
+    .poster-copy,
+    .poster-eng,
+    .poster-message{
+      text-shadow:
+        0 2px 5px #000,
+        0 0 8px #000;
+    }
+
+    /* 국적 */
+
+    .poster-flags{
+      display:flex;
+      justify-content:center;
+      flex-wrap:wrap;
+      gap:6px;
+      margin-top:14px;
+    }
+
+    .poster-flag{
+      padding:6px 10px;
+      border:1px solid rgba(218,172,64,.65);
+      border-radius:30px;
+      background:rgba(0,0,0,.80);
+      color:#fff;
+      font-size:11px;
+      font-weight:800;
+    }
+
+    .poster-message{
+      margin-top:10px;
+      color:#e6b94d;
+      font-size:15px;
+      font-weight:900;
+      letter-spacing:1px;
+    }
+
+    /* 가격 */
+
+    .poster-price{
+      position:absolute;
+      z-index:4;
+      left:50%;
+      bottom:45px;
+      transform:translateX(-50%);
+      width:61%;
+      max-width:580px;
+      padding:16px 12px;
+      text-align:center;
+      border:1px solid #e2b347;
+      border-radius:22px;
+      background:
+        radial-gradient(
+          circle at 50% 0%,
+          rgba(222,169,43,.22),
+          transparent 55%
+        ),
+        rgba(5,5,5,.94);
+      box-shadow:
+        0 0 30px rgba(211,160,40,.13),
+        inset 0 0 25px rgba(255,215,102,.04);
+    }
+
+    .poster-price-label{
+      color:#e7bd54;
+      font-size:17px;
+      font-weight:900;
+    }
+
+    .poster-price-main{
+      margin-top:-3px;
+      color:#f3cb63;
+      font-size:61px;
+      line-height:1.1;
+      font-weight:950;
+      letter-spacing:-5px;
+      text-shadow:
+        0 2px 3px #000,
+        0 0 20px rgba(235,186,66,.18);
+    }
+
+    .poster-price-main span{
+      margin-right:8px;
+      color:#fff;
+      font-size:25px;
+      letter-spacing:-1px;
+    }
+
+    /* 혜택 */
+
+    .poster-benefits{
+      position:relative;
+      z-index:3;
+      display:grid;
+      grid-template-columns:repeat(4,1fr);
+      gap:8px;
+      padding:4px 18px 17px;
+    }
+
+    .poster-benefit{
+      min-height:105px;
+      padding:13px 5px;
+      display:flex;
+      flex-direction:column;
+      align-items:center;
+      justify-content:center;
+      text-align:center;
+      border:1px solid #59421a;
+      border-radius:14px;
+      background:linear-gradient(180deg,#141414,#0b0b0b);
+    }
+
+    .poster-benefit .ico{
+      margin-bottom:6px;
+      font-size:28px;
+      line-height:1;
+    }
+
+    .poster-benefit b{
+      color:#edc861;
+      font-size:16px;
+    }
+
+    .poster-benefit span{
+      margin-top:2px;
+      color:#ddd;
+      font-size:13px;
+    }
+
+    /* 전화문의 */
+
+    .poster-call{
+      position:relative;
+      z-index:3;
+      display:block;
+      margin:3px 26px 18px;
+      padding:19px 14px;
+      border-radius:50px;
+      background:
+        linear-gradient(
+          135deg,
+          #f7da7b 0%,
+          #e5b743 45%,
+          #b67e18 100%
+        );
+      color:#050505;
+      text-decoration:none;
+      text-align:center;
+      font-size:23px;
+      font-weight:950;
+      box-shadow:0 8px 32px rgba(215,166,48,.30);
+    }
+
+    .poster-call:hover{
+      transform:translateY(-2px);
+    }
+
+    /* 서비스 */
+
+    .poster-services{
+      position:relative;
+      z-index:3;
+      display:grid;
+      grid-template-columns:repeat(4,1fr);
+      gap:8px;
+      padding:0 18px 20px;
+    }
+
+    .poster-service{
+      padding:13px 5px;
+      text-align:center;
+      border:1px solid #493716;
+      border-radius:13px;
+      background:#0d0d0d;
+      color:#ddd;
+      font-size:12px;
+    }
+
+    .poster-service strong{
+      display:block;
+      margin-bottom:2px;
+      color:#ebc65e;
+      font-size:14px;
+    }
+
+    .poster-footer{
+      padding:5px 10px 20px;
+      text-align:center;
+      color:#9a7b39;
+      font-size:10px;
+      letter-spacing:5px;
+    }
+
+    /* =========================
+       SEO 영역
+    ========================= */
+
+    .seo-hero{
+      margin-top:25px;
+      padding:35px 20px;
+      text-align:center;
+      border:1px solid #514321;
+      border-radius:17px;
+      background:
+        radial-gradient(
+          circle at top,
+          #211a09 0%,
+          #0d0b06 40%,
+          #080808 75%
+        );
+    }
+
+    .gold{
+      color:#d7b65a;
+    }
+
+    h1{
+      margin:7px 0 12px;
+      font-size:29px;
+      line-height:1.4;
+    }
+
+    .seo-hero p{
+      max-width:700px;
+      margin:0 auto;
+      color:#bbb;
+      font-size:14px;
+    }
+
+    .section{
+      margin-top:20px;
+      padding:25px;
+      border:1px solid #292929;
+      border-radius:15px;
+      background:#0e0e0e;
+    }
+
+    h2{
+      margin-top:0;
+      color:#d5b966;
+      font-size:22px;
+    }
+
+    h3{
+      margin-bottom:5px;
+      color:#ead798;
+      font-size:18px;
+    }
+
+    .section p{
+      color:#c9c9c9;
+      font-size:14px;
+    }
+
+    .card{
+      margin:14px 0;
+      padding:15px 17px;
+      border-left:3px solid #9e843f;
+      border-radius:8px;
+      background:#151515;
+    }
+
+    .nav{
+      margin-top:23px;
+      text-align:center;
+    }
+
+    .nav a{
+      display:inline-block;
+      margin:5px;
+      padding:9px 15px;
+      border:1px solid #786224;
+      border-radius:30px;
+      color:#d7bd72;
+      text-decoration:none;
+      font-size:13px;
+    }
+
+    .nav a:hover{
+      background:#b89139;
+      color:#080808;
+    }
+
+    .home{
+      display:block;
+      width:fit-content;
+      margin:32px auto 0;
+      padding:12px 25px;
+      border-radius:30px;
+      background:linear-gradient(135deg,#d4af37,#8f6c18);
+      color:#080808;
+      text-decoration:none;
+      font-weight:800;
+    }
+
+    footer{
+      margin-top:40px;
+      text-align:center;
+      color:#666;
+      font-size:12px;
+    }
+
+    /* =========================
+       MOBILE
+    ========================= */
+
+    @media(max-width:650px){
+
+      .wrap{
+        padding:8px 7px 55px;
+      }
+
+      .multi-poster{
+        border-radius:13px;
+      }
+
+      .poster-hero{
+        height:430px;
+      }
+
+      .poster-girl{
+        width:58%;
+      }
+
+      .poster-girl.left{
+        left:-10%;
+      }
+
+      .poster-girl.right{
+        right:-10%;
+      }
+
+      .poster-girl img{
+        object-position:center 12%;
+      }
+
+      .poster-center{
+        width:78%;
+        padding-top:18px;
+      }
+
+      .poster-center::before{
+        width:135%;
+        height:270px;
+      }
+
+      .poster-crown{
+        font-size:27px;
+      }
+
+      .poster-premium{
+        margin-top:5px;
+        font-size:9px;
+        letter-spacing:5px;
+      }
+
+      .poster-copy{
+        margin-top:6px;
+        font-size:11px;
+      }
+
+      .poster-title{
+        font-size:43px;
+        letter-spacing:-4px;
+      }
+
+      .poster-eng{
+        font-size:8px;
+        letter-spacing:1.7px;
+      }
+
+      .poster-flags{
+        margin-top:8px;
+        gap:4px;
+      }
+
+      .poster-flag{
+        padding:4px 7px;
+        font-size:9px;
+      }
+
+      .poster-message{
+        margin-top:6px;
+        font-size:12px;
+      }
+
+      .poster-price{
+        width:80%;
+        bottom:28px;
+        padding:12px 6px;
+      }
+
+      .poster-price-label{
+        font-size:14px;
+      }
+
+      .poster-price-main{
+        font-size:45px;
+      }
+
+      .poster-price-main span{
+        margin-right:5px;
+        font-size:18px;
+      }
+
+      .poster-benefits{
+        gap:4px;
+        padding:4px 6px 11px;
+      }
+
+      .poster-benefit{
+        min-height:88px;
+        padding:8px 2px;
+      }
+
+      .poster-benefit .ico{
+        margin-bottom:4px;
+        font-size:22px;
+      }
+
+      .poster-benefit b{
+        font-size:11px;
+      }
+
+      .poster-benefit span{
+        font-size:9px;
+      }
+
+      .poster-call{
+        margin:2px 8px 12px;
+        padding:15px 7px;
+        font-size:17px;
+      }
+
+      .poster-services{
+        gap:4px;
+        padding:0 6px 15px;
+      }
+
+      .poster-service{
+        padding:9px 2px;
+        font-size:8px;
+      }
+
+      .poster-service strong{
+        font-size:10px;
+      }
+
+      .poster-footer{
+        padding-bottom:16px;
+        font-size:8px;
+        letter-spacing:3px;
+      }
+
+      .seo-hero{
+        padding:28px 15px;
+      }
+
+      h1{
+        font-size:23px;
+      }
+
+      .section{
+        padding:20px 15px;
+      }
+    }
+
+  </style>
 </head>
-
 
 <body>
 
 <div class="wrap">
 
+  <!-- =========================
+       프리미엄 다국적 포스터
+  ========================== -->
 
-<!-- =================================
-     PREMIUM POSTER
-================================== -->
+  <section class="multi-poster">
 
-<section class="multi-poster">
+    <div class="poster-hero">
 
-
-  <div class="poster-hero">
-
-
-    <!-- LEFT MODEL -->
-
-    <div class="poster-girl left">
-
-      <img
-        src="/images/girl-left.jpg"
-        alt="천안다국적 프리미엄 안내"
-      >
-
-    </div>
-
-
-    <!-- RIGHT MODEL -->
-
-    <div class="poster-girl right">
-
-      <img
-        src="/images/girl-right.jpg"
-        alt="천안다국적 프리미엄 안내"
-      >
-
-    </div>
-
-
-    <!-- CENTER -->
-
-    <div class="poster-center">
-
-
-      <div class="poster-crown">
-        ♛
+      <div class="poster-girl left">
+        <img
+          src="/images/girl-left.jpg"
+          alt="천안다국적 프리미엄 안내"
+        >
       </div>
 
-
-      <div class="poster-premium">
-        CHEONAN PREMIUM
+      <div class="poster-girl right">
+        <img
+          src="/images/girl-right.jpg"
+          alt="천안다국적 프리미엄 안내"
+        >
       </div>
 
+      <div class="poster-center">
 
-      <div class="poster-copy">
-        다양한 국적의 프리미엄 다국적
-      </div>
+        <div class="poster-crown">♛</div>
 
-
-      <div class="poster-title">
-        천안다국적
-      </div>
-
-
-      <div class="poster-eng">
-        PREMIUM MULTINATIONAL KARAOKE
-      </div>
-
-
-      <div class="poster-flags">
-
-
-        <div class="poster-flag">
-          🇹🇭 태국
+        <div class="poster-premium">
+          CHEONAN PREMIUM
         </div>
 
-
-        <div class="poster-flag">
-          🇻🇳 베트남
+        <div class="poster-copy">
+          다양한 국적의 프리미엄 다국적
         </div>
 
-
-        <div class="poster-flag">
-          🇨🇳 중국
+        <div class="poster-title">
+          천안다국적
         </div>
 
-
-        <div class="poster-flag">
-          🌏 다양한 국적
+        <div class="poster-eng">
+          PREMIUM MULTINATIONAL KARAOKE
         </div>
 
+        <div class="poster-flags">
+
+          <div class="poster-flag">
+            🇹🇭 태국
+          </div>
+
+          <div class="poster-flag">
+            🇻🇳 베트남
+          </div>
+
+          <div class="poster-flag">
+            🇨🇳 중국
+          </div>
+
+          <div class="poster-flag">
+            🌏 다양한 국적
+          </div>
+
+        </div>
+
+        <div class="poster-message">
+          PREMIUM MULTINATIONAL
+        </div>
 
       </div>
 
+      <div class="poster-price">
 
-      <div class="poster-message">
-        PREMIUM MULTINATIONAL
+        <div class="poster-price-label">
+          프리미엄 다국적
+        </div>
+
+        <div class="poster-price-main">
+          <span>인당</span>10만원
+        </div>
+
       </div>
-
 
     </div>
 
 
-    <!-- PRICE -->
+    <!-- 혜택 -->
 
-    <div class="poster-price">
+    <div class="poster-benefits">
 
-
-      <div class="poster-price-label">
-        프리미엄 다국적
+      <div class="poster-benefit">
+        <div class="ico">🍻</div>
+        <b>소주 · 맥주</b>
+        <span>무제한</span>
       </div>
 
-
-      <div class="poster-price-main">
-
-        <span>인당</span>10만원
-
+      <div class="poster-benefit">
+        <div class="ico">🍽️</div>
+        <b>안주</b>
+        <span>무제한</span>
       </div>
 
+      <div class="poster-benefit">
+        <div class="ico">🥤</div>
+        <b>음료</b>
+        <span>무제한</span>
+      </div>
+
+      <div class="poster-benefit">
+        <div class="ico">🚫</div>
+        <b>룸티 X</b>
+        <span>추가비용 없음</span>
+      </div>
 
     </div>
 
 
-  </div>
+    <!-- 전화문의 -->
+
+    <a
+      class="poster-call"
+      href="tel:01075196883"
+    >
+      ☎ 010-7519-6883 문의하기
+    </a>
 
 
+    <!-- 추가 서비스 -->
 
-  <!-- BENEFITS -->
+    <div class="poster-services">
 
-
-  <div class="poster-benefits">
-
-
-    <div class="poster-benefit">
-
-      <div class="ico">
-        🍻
+      <div class="poster-service">
+        <strong>🚗 픽업</strong>
+        천안 전지역
       </div>
 
-      <b>
-        소주 · 맥주
-      </b>
+      <div class="poster-service">
+        <strong>🎂 생일</strong>
+        이벤트 안내
+      </div>
 
-      <span>
-        무제한
+      <div class="poster-service">
+        <strong>💎 프리미엄</strong>
+        이용 안내
+      </div>
+
+      <div class="poster-service">
+        <strong>☎ 상담</strong>
+        이용 문의
+      </div>
+
+    </div>
+
+    <div class="poster-footer">
+      CHEONAN PREMIUM MULTINATIONAL
+    </div>
+
+  </section>
+
+
+  <!-- =========================
+       기존 SEO 영역
+  ========================== -->
+
+  <header class="seo-hero">
+
+    <div class="gold">
+      CHEONAN MULTINATIONAL GUIDE
+    </div>
+
+    <h1>
+      천안다국적노래방 · 천안다국적
+      <br>
+      <span class="gold">
+        성정동 다국적 이용안내
       </span>
+    </h1>
+
+    <p>
+      천안다국적노래방을 찾는 분들을 위해
+      성정동 다국적을 중심으로 위치, 이용시간,
+      이용 방식과 지역별 정보를 정리했습니다.
+    </p>
+
+  </header>
+
+
+  <section class="section">
+
+    <h2>천안다국적노래방 이용안내</h2>
+
+    <p>
+      천안유흥 관련 정보를 찾으면서 천안다국적 또는
+      천안다국적노래방을 알아보는 경우가 있습니다.
+      이용 조건은 위치, 시간, 인원과 업소별 운영 방식에 따라
+      달라질 수 있으므로 방문 전 필요한 정보를 확인하는 것이 좋습니다.
+    </p>
+
+    <div class="card">
+
+      <h3>성정동 다국적 노래방</h3>
+
+      <p>
+        성정동다국적과 성정동 다국적 노래방을 찾는 경우
+        위치와 접근성, 이용시간과 이용 조건을 함께 확인하면
+        원하는 조건에 맞는 곳을 찾기 쉽습니다.
+      </p>
 
     </div>
 
+    <div class="card">
 
+      <h3>두정동 다국적</h3>
 
-    <div class="poster-benefit">
-
-      <div class="ico">
-        🍽️
-      </div>
-
-      <b>
-        안주
-      </b>
-
-      <span>
-        무제한
-      </span>
+      <p>
+        두정동다국적 관련 정보를 찾는 경우
+        이동거리와 운영시간, 이용 가능 여부 등을 확인하고
+        성정동 지역과 함께 비교해볼 수 있습니다.
+      </p>
 
     </div>
 
+    <div class="card">
 
+      <h3>불당동 다국적</h3>
 
-    <div class="poster-benefit">
-
-      <div class="ico">
-        🥤
-      </div>
-
-      <b>
-        음료
-      </b>
-
-      <span>
-        무제한
-      </span>
+      <p>
+        불당동다국적 관련 정보를 알아보는 경우에도
+        위치와 이용시간, 운영 여부 등 필요한 정보를
+        방문 전에 확인하는 것이 좋습니다.
+      </p>
 
     </div>
 
+  </section>
 
 
-    <div class="poster-benefit">
+  <section class="section">
 
-      <div class="ico">
-        🚫
-      </div>
+    <h2>천안다국적 이용지역 안내</h2>
 
-      <b>
-        룸티 X
-      </b>
+    <p>
+      천안에서는 성정동다국적을 비롯해 두정동다국적,
+      불당동다국적 등 지역명을 함께 검색해
+      관련 정보를 찾는 경우가 있습니다.
+    </p>
 
-      <span>
-        추가비용 없음
-      </span>
+    <p>
+      특히 천안 성정동 다국적 노래방을 찾는 경우
+      원하는 위치와 이동거리, 이용시간과 운영 정보를
+      함께 확인하면 이용하기 편리합니다.
+    </p>
+
+  </section>
+
+
+  <section class="section">
+
+    <h2>천안다국적노래방 이용 전 확인사항</h2>
+
+    <p>
+      천안다국적노래방은 이용 시간과 운영 방식,
+      서비스 구성 등에 따라 이용 조건이 달라질 수 있습니다.
+      방문 전에 정확한 이용 가능 여부와 필요한 정보를
+      확인하는 것이 좋습니다.
+    </p>
+
+    <div class="card">
+
+      <h3>위치와 이용시간 확인</h3>
+
+      <p>
+        성정동 다국적 노래방을 비롯한 관련 정보를 찾을 때는
+        원하는 지역과 실제 이동거리, 이용 가능한 시간대를
+        함께 확인하면 편리합니다.
+      </p>
 
     </div>
 
+    <div class="card">
 
-  </div>
+      <h3>이용 조건 확인</h3>
+
+      <p>
+        이용 조건은 업소와 시간대에 따라 차이가 있을 수 있으므로
+        이용 전 운영 여부와 관련 정보를 확인해보세요.
+      </p>
+
+    </div>
+
+  </section>
 
 
+  <section class="section">
 
-  <!-- CALL -->
+    <h2>천안유흥 관련 업종 안내</h2>
+
+    <p>
+      천안유흥 관련 정보를 찾는 경우 다국적 노래방 외에도
+      노래방, 노래클럽, 가라오케, 하이퍼블릭 등
+      여러 형태의 관련 정보를 확인할 수 있습니다.
+    </p>
+
+    <div class="nav">
+
+      <a href="/cheonan-noraebang.html">
+        천안노래방 안내
+      </a>
+
+      <a href="/cheonanclub.html">
+        천안노래클럽 안내
+      </a>
+
+      <a href="/cheonankaraoke.html">
+        천안가라오케 안내
+      </a>
+
+      <a href="/cheonanhapeo.html">
+        천안하퍼·천안하이퍼블릭 안내
+      </a>
+
+    </div>
+
+  </section>
 
 
-  <a
-    class="poster-call"
-    href="tel:01075196883"
-  >
-
-    ☎ 010-7519-6883 문의하기
-
+  <a class="home" href="/">
+    ← 천안유흥 메인페이지로 돌아가기
   </a>
 
 
-
-  <!-- SERVICES -->
-
-
-  <div class="poster-services">
-
-
-    <div class="poster-service">
-
-      <strong>
-        🚗 픽업
-      </strong>
-
-      천안 전지역
-
-    </div>
-
-
-
-    <div class="poster-service">
-
-      <strong>
-        🎂 생일
-      </strong>
-
-      이벤트 안내
-
-    </div>
-
-
-
-    <div class="poster-service">
-
-      <strong>
-        💎 프리미엄
-      </strong>
-
-      이용 안내
-
-    </div>
-
-
-
-    <div class="poster-service">
-
-      <strong>
-        ☎ 상담
-      </strong>
-
-      이용 문의
-
-    </div>
-
-
-  </div>
-
-
-
-  <div class="poster-footer">
-    CHEONAN PREMIUM MULTINATIONAL
-  </div>
-
-
-</section>
-
-
-
-<!-- =================================
-     SEO CONTENT
-================================== -->
-
-
-<header class="seo-hero">
-
-
-  <div class="gold">
-    CHEONAN MULTINATIONAL GUIDE
-  </div>
-
-
-  <h1>
-
-    천안다국적노래방 · 천안다국적
-
-    <br>
-
-    <span class="gold">
-      성정동 다국적 이용안내
-    </span>
-
-  </h1>
-
-
-  <p>
-
-    천안다국적노래방을 찾는 분들을 위해
-    성정동 다국적을 중심으로 위치, 이용시간,
-    이용 방식과 지역별 정보를 정리했습니다.
-
-  </p>
-
-
-</header>
-
-
-
-<section class="section">
-
-
-  <h2>
-    천안다국적노래방 이용안내
-  </h2>
-
-
-  <p>
-
-    천안유흥 관련 정보를 찾으면서 천안다국적 또는
-    천안다국적노래방을 알아보는 경우가 있습니다.
-    이용 조건은 위치, 시간, 인원과 업소별 운영 방식에 따라
-    달라질 수 있으므로 방문 전 필요한 정보를 확인하는 것이 좋습니다.
-
-  </p>
-
-
-
-  <div class="card">
-
-
-    <h3>
-      성정동 다국적 노래방
-    </h3>
-
-
-    <p>
-
-      성정동다국적과 성정동 다국적 노래방을 찾는 경우
-      위치와 접근성, 이용시간과 이용 조건을 함께 확인하면
-      원하는 조건에 맞는 곳을 찾기 쉽습니다.
-
-    </p>
-
-
-  </div>
-
-
-
-  <div class="card">
-
-
-    <h3>
-      두정동 다국적
-    </h3>
-
-
-    <p>
-
-      두정동다국적 관련 정보를 찾는 경우
-      이동거리와 운영시간, 이용 가능 여부 등을 확인하고
-      성정동 지역과 함께 비교해볼 수 있습니다.
-
-    </p>
-
-
-  </div>
-
-
-
-  <div class="card">
-
-
-    <h3>
-      불당동 다국적
-    </h3>
-
-
-    <p>
-
-      불당동다국적 관련 정보를 알아보는 경우에도
-      위치와 이용시간, 운영 여부 등 필요한 정보를
-      방문 전에 확인하는 것이 좋습니다.
-
-    </p>
-
-
-  </div>
-
-
-</section>
-
-
-
-<section class="section">
-
-
-  <h2>
-    천안다국적 이용지역 안내
-  </h2>
-
-
-  <p>
-
-    천안에서는 성정동다국적을 비롯해 두정동다국적,
-    불당동다국적 등 지역명을 함께 검색해
-    관련 정보를 찾는 경우가 있습니다.
-
-  </p>
-
-
-  <p>
-
-    특히 천안 성정동 다국적 노래방을 찾는 경우
-    원하는 위치와 이동거리, 이용시간과 운영 정보를
-    함께 확인하면 이용하기 편리합니다.
-
-  </p>
-
-
-</section>
-
-
-
-<section class="section">
-
-
-  <h2>
-    천안다국적노래방 이용 전 확인사항
-  </h2>
-
-
-  <p>
-
-    천안다국적노래방은 이용 시간과 운영 방식,
-    서비스 구성 등에 따라 이용 조건이 달라질 수 있습니다.
-    방문 전에 정확한 이용 가능 여부와 필요한 정보를
-    확인하는 것이 좋습니다.
-
-  </p>
-
-
-
-  <div class="card">
-
-
-    <h3>
-      위치와 이용시간 확인
-    </h3>
-
-
-    <p>
-
-      성정동 다국적 노래방을 비롯한 관련 정보를 찾을 때는
-      원하는 지역과 실제 이동거리, 이용 가능한 시간대를
-      함께 확인하면 편리합니다.
-
-    </p>
-
-
-  </div>
-
-
-
-  <div class="card">
-
-
-    <h3>
-      이용 조건 확인
-    </h3>
-
-
-    <p>
-
-      이용 조건은 업소와 시간대에 따라 차이가 있을 수 있으므로
-      이용 전 운영 여부와 관련 정보를 확인해보세요.
-
-    </p>
-
-
-  </div>
-
-
-</section>
-
-
-
-<section class="section">
-
-
-  <h2>
-    천안유흥 관련 업종 안내
-  </h2>
-
-
-  <p>
-
-    천안유흥 관련 정보를 찾는 경우 다국적 노래방 외에도
-    노래방, 노래클럽, 가라오케, 하이퍼블릭 등
-    여러 형태의 관련 정보를 확인할 수 있습니다.
-
-  </p>
-
-
-
-  <div class="nav">
-
-
-    <a href="/cheonan-noraebang.html">
-      천안노래방 안내
-    </a>
-
-
-    <a href="/cheonanclub.html">
-      천안노래클럽 안내
-    </a>
-
-
-    <a href="/cheonankaraoke.html">
-      천안가라오케 안내
-    </a>
-
-
-    <a href="/cheonanhapeo.html">
-      천안하퍼·천안하이퍼블릭 안내
-    </a>
-
-
-  </div>
-
-
-</section>
-
-
-
-<a
-  class="home"
-  href="/"
->
-
-  ← 천안유흥 메인페이지로 돌아가기
-
-</a>
-
-
-
-<footer>
-
-  © 천안노래방.kr
-
-</footer>
-
+  <footer>
+    © 천안노래방.kr
+  </footer>
 
 </div>
 
