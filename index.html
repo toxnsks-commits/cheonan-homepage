@@ -61,10 +61,10 @@ content="천안노래방·천안노래클럽·천안가라오케 안내. 천안�
     },
     {
       "@type":"Question",
-      "name":"정확한 이용 금액은요?",
+      "name":"이용 금액은 어떻게 되나요?",
       "acceptedAnswer":{
         "@type":"Answer",
-        "text":"기본 안내가는 퍼블릭 10만원, 하이퍼블릭 15만원, 다국적 10만원부터이며 상세 구성은 문의 시 확인해주세요."
+        "text":"퍼블릭, 하이퍼블릭, 다국적 등 업종별 이용 금액과 상세 구성은 페이지 및 문의를 통해 확인해주세요."
       }
     }
   ]
@@ -72,16 +72,16 @@ content="천안노래방·천안노래클럽·천안가라오케 안내. 천안�
 </script>
 
 <style>
+
 :root{
   --bg:#050505;
   --panel:#0d0d0d;
   --panel2:#151515;
   --gold:#d9ad52;
   --gold2:#ffe6a1;
-  --text:#fff;
+  --text:#ffffff;
   --muted:#aaa;
   --line:rgba(218,173,82,.30);
-  --shadow:0 20px 60px rgba(0,0,0,.55);
 }
 
 *{
@@ -94,11 +94,9 @@ html{
 
 body{
   margin:0;
-  padding-bottom:86px;
-  background:
-    radial-gradient(circle at 50% 0%,rgba(218,173,82,.14),transparent 25%),
-    #050505;
-  color:var(--text);
+  padding:0 0 84px;
+  background:#050505;
+  color:#fff;
   font-family:Pretendard,"Noto Sans KR","Apple SD Gothic Neo","Malgun Gothic",Arial,sans-serif;
   line-height:1.65;
 }
@@ -113,255 +111,130 @@ a{
   margin:0 auto;
 }
 
-/* =========================
-   TOP NAV
-========================= */
+
+/* ==============================
+   상단 헤더
+============================== */
 
 .nav{
   position:sticky;
   top:0;
-  z-index:100;
-  background:rgba(5,5,5,.92);
+  z-index:1000;
+  width:100%;
+  background:rgba(3,3,3,.96);
   backdrop-filter:blur(14px);
-  border-bottom:1px solid var(--line);
+  border-bottom:1px solid rgba(218,173,82,.28);
 }
 
 .navInner{
-  max-width:1000px;
-  margin:auto;
-  padding:11px 16px;
+  width:min(calc(100% - 28px),1100px);
+  height:64px;
+  margin:0 auto;
   display:flex;
   align-items:center;
   justify-content:space-between;
-  gap:12px;
+  gap:15px;
 }
 
 .logo{
   color:var(--gold2);
-  font-size:14px;
+  font-size:15px;
   font-weight:950;
-  letter-spacing:.12em;
+  letter-spacing:.13em;
 }
 
 .navCall{
-  padding:9px 15px;
+  padding:9px 16px;
   border-radius:999px;
-  background:linear-gradient(135deg,#ffe4a0,#b77b1e);
+  background:linear-gradient(135deg,#ffe49b,#bc8125);
   color:#080808;
+  font-size:14px;
   font-weight:950;
 }
 
-/* =========================
-   HERO
-========================= */
 
-.hero{
-  text-align:center;
-  padding:52px 15px 30px;
-}
+/* ==============================
+   메인 이미지
+============================== */
 
-.heroSmall{
-  color:var(--gold);
-  font-size:12px;
-  font-weight:900;
-  letter-spacing:.20em;
-}
-
-.hero h1{
-  margin:11px 0 5px;
-  font-size:clamp(45px,11vw,82px);
-  line-height:1;
-  letter-spacing:-.06em;
-}
-
-.goldText{
-  background:linear-gradient(135deg,#fff1bd,#bd8730,#ffe7a0);
-  -webkit-background-clip:text;
-  background-clip:text;
-  color:transparent;
-}
-
-.certified{
-  display:inline-block;
-  margin:17px auto 0;
-  padding:9px 22px;
-  border:1px solid var(--gold);
-  border-radius:999px;
-  background:rgba(218,173,82,.07);
-  color:var(--gold2);
-  font-size:clamp(16px,4vw,21px);
-  font-weight:950;
-}
-
-.heroDesc{
-  max-width:720px;
-  margin:20px auto 0;
-  color:#c9c9c9;
-  font-size:16px;
-}
-
-.priceStrip{
-  max-width:850px;
-  margin:27px auto 0;
-  display:grid;
-  grid-template-columns:repeat(3,1fr);
-  overflow:hidden;
-  border:1px solid var(--line);
-  border-radius:18px;
-  background:#0b0b0b;
-  box-shadow:var(--shadow);
-}
-
-.priceItem{
-  padding:18px 8px;
-  border-right:1px solid var(--line);
-}
-
-.priceItem:last-child{
-  border-right:0;
-}
-
-.priceItem small{
-  display:block;
-  margin-bottom:3px;
-  color:#aaa;
-}
-
-.priceItem strong{
-  color:var(--gold2);
-  font-size:clamp(21px,5vw,30px);
-}
-
-.mainCall{
-  display:flex;
-  width:min(100%,520px);
-  margin:24px auto 0;
-  padding:17px;
-  align-items:center;
-  justify-content:center;
-  border-radius:15px;
-  background:linear-gradient(135deg,#ffe4a0,#b77b1e);
-  color:#080808;
-  font-size:20px;
-  font-weight:950;
-  box-shadow:0 14px 40px rgba(0,0,0,.55);
-}
-
-/* =========================
-   MAIN LONG IMAGE
-========================= */
-
-.bannerSection{
+.mainVisual{
   width:100%;
-  padding:0 0 35px;
+  margin:0;
+  padding:0;
+  overflow:hidden;
+  background:#000;
 }
 
-.longBanner{
+.mainVisualLink{
   display:block;
   width:100%;
   max-width:1100px;
   margin:0 auto;
 }
 
-.longBanner img{
+.mainVisual img{
   display:block;
   width:100%;
   height:auto;
   margin:0;
+  padding:0;
   border:0;
-  border-radius:14px;
-  box-shadow:0 20px 70px rgba(0,0,0,.65);
 }
 
-/* =========================
-   SECTION
-========================= */
+
+/* ==============================
+   공통 섹션
+============================== */
 
 .section{
-  padding:54px 0;
+  padding:55px 0;
 }
 
 .sectionTitle{
-  margin-bottom:25px;
+  margin-bottom:26px;
   text-align:center;
 }
 
 .sectionTitle small{
   color:var(--gold);
+  font-size:12px;
   font-weight:950;
-  letter-spacing:.15em;
+  letter-spacing:.18em;
 }
 
 .sectionTitle h2{
-  margin:6px 0;
+  margin:7px 0;
   font-size:clamp(27px,6vw,40px);
-  letter-spacing:-.03em;
+  letter-spacing:-.04em;
 }
 
 .sectionTitle p{
   margin:0;
   color:#999;
+  font-size:14px;
 }
 
-/* =========================
-   DETAIL LINKS
-========================= */
 
-.pageGrid{
-  display:grid;
-  grid-template-columns:repeat(5,1fr);
-  gap:10px;
-}
-
-.pageLink{
-  padding:22px 10px;
-  text-align:center;
-  border:1px solid var(--line);
-  border-radius:17px;
-  background:linear-gradient(180deg,#171717,#0d0d0d);
-  transition:.2s;
-}
-
-.pageLink:hover{
-  transform:translateY(-3px);
-  border-color:var(--gold);
-}
-
-.pageLink .icon{
-  font-size:26px;
-}
-
-.pageLink strong{
-  display:block;
-  margin-top:8px;
-  color:var(--gold2);
-}
-
-.pageLink span{
-  display:block;
-  margin-top:3px;
-  color:#777;
-  font-size:12px;
-}
-
-/* =========================
-   TODAY STATUS
-========================= */
+/* ==============================
+   오늘 현황
+============================== */
 
 .attendanceBox{
   max-width:820px;
-  margin:auto;
-  padding:27px 20px;
+  margin:0 auto;
+  padding:25px 20px;
   border:1px solid var(--line);
   border-radius:22px;
-  background:linear-gradient(180deg,#151515,#0b0b0b);
-  box-shadow:var(--shadow);
+  background:
+    radial-gradient(circle at 50% 0%,rgba(218,173,82,.10),transparent 60%),
+    #0d0d0d;
 }
 
 .todayDate{
   margin-bottom:17px;
   text-align:center;
   color:var(--gold2);
+  font-size:17px;
   font-weight:950;
   letter-spacing:.12em;
 }
@@ -377,9 +250,9 @@ a{
   justify-content:space-between;
   gap:12px;
   padding:15px;
-  border:1px solid #222;
+  border:1px solid #242424;
   border-radius:14px;
-  background:#0b0b0b;
+  background:#080808;
 }
 
 .attendanceName{
@@ -388,7 +261,7 @@ a{
 
 .attendanceCount{
   color:var(--gold2);
-  font-size:20px;
+  font-size:21px;
   font-weight:950;
 }
 
@@ -414,15 +287,59 @@ a{
 }
 
 .attendanceNote{
-  margin-top:10px;
+  margin-top:11px;
   text-align:center;
   color:#777;
   font-size:12px;
 }
 
-/* =========================
-   SERVICES
-========================= */
+
+/* ==============================
+   업종별 페이지
+============================== */
+
+.pageGrid{
+  display:grid;
+  grid-template-columns:repeat(5,1fr);
+  gap:10px;
+}
+
+.pageLink{
+  padding:23px 10px;
+  text-align:center;
+  border:1px solid var(--line);
+  border-radius:17px;
+  background:linear-gradient(180deg,#171717,#0b0b0b);
+  transition:.2s ease;
+}
+
+.pageLink:hover{
+  transform:translateY(-3px);
+  border-color:#e6bd67;
+}
+
+.pageIcon{
+  font-size:27px;
+}
+
+.pageLink strong{
+  display:block;
+  margin-top:8px;
+  color:var(--gold2);
+  font-size:16px;
+}
+
+.pageLink span{
+  display:block;
+  margin-top:3px;
+  color:#888;
+  font-size:12px;
+}
+
+
+/* ==============================
+   서비스
+============================== */
 
 .serviceGrid{
   display:grid;
@@ -431,15 +348,15 @@ a{
 }
 
 .service{
-  padding:25px 15px;
+  padding:26px 15px;
   text-align:center;
-  border:1px solid #202020;
+  border:1px solid #242424;
   border-radius:18px;
-  background:linear-gradient(180deg,#151515,#0d0d0d);
+  background:linear-gradient(180deg,#151515,#0b0b0b);
 }
 
 .serviceIcon{
-  font-size:30px;
+  font-size:31px;
 }
 
 .service strong{
@@ -454,15 +371,16 @@ a{
   font-size:14px;
 }
 
-/* =========================
-   SEO TEXT
-========================= */
+
+/* ==============================
+   SEO 텍스트
+============================== */
 
 .seoBox{
   padding:28px;
-  border:1px solid #1e1e1e;
+  border:1px solid #202020;
   border-radius:20px;
-  background:#0c0c0c;
+  background:#0b0b0b;
   color:#aaa;
 }
 
@@ -476,22 +394,38 @@ a{
   color:var(--gold2);
 }
 
-/* =========================
+.seoLinks{
+  display:flex;
+  flex-wrap:wrap;
+  gap:8px;
+  margin-top:20px;
+}
+
+.seoLinks a{
+  padding:8px 12px;
+  border:1px solid var(--line);
+  border-radius:999px;
+  color:#d8c394;
+  font-size:13px;
+}
+
+
+/* ==============================
    FAQ
-========================= */
+============================== */
 
 .faqWrap{
   max-width:820px;
-  margin:auto;
+  margin:0 auto;
   display:grid;
   gap:10px;
 }
 
 .faq{
   padding:20px;
-  border:1px solid #202020;
+  border:1px solid #222;
   border-radius:17px;
-  background:#101010;
+  background:#0f0f0f;
 }
 
 .faq strong{
@@ -505,24 +439,24 @@ a{
   font-size:14px;
 }
 
-/* =========================
-   FINAL CTA
-========================= */
+
+/* ==============================
+   마지막 CTA
+============================== */
 
 .cta{
-  margin:30px 0;
-  padding:40px 20px;
+  padding:42px 20px;
   text-align:center;
   border:1px solid var(--line);
   border-radius:23px;
   background:
-    radial-gradient(circle at 50% 0%,rgba(218,173,82,.16),transparent 60%),
+    radial-gradient(circle at 50% 0%,rgba(218,173,82,.17),transparent 60%),
     #0b0b0b;
 }
 
 .cta small{
   color:var(--gold);
-  font-weight:900;
+  font-weight:950;
   letter-spacing:.15em;
 }
 
@@ -537,11 +471,16 @@ a{
 
 .ctaPhone{
   display:block;
-  margin-top:15px;
+  margin-top:14px;
   color:var(--gold2);
-  font-size:clamp(28px,7vw,45px);
+  font-size:clamp(27px,7vw,44px);
   font-weight:950;
 }
+
+
+/* ==============================
+   Footer
+============================== */
 
 footer{
   padding:25px 15px 15px;
@@ -550,76 +489,78 @@ footer{
   font-size:12px;
 }
 
-/* =========================
-   FIXED PHONE
-========================= */
+
+/* ==============================
+   하단 고정 전화버튼
+============================== */
 
 .fixedCall{
   position:fixed;
-  z-index:200;
+  z-index:2000;
   left:12px;
   right:12px;
   bottom:12px;
-  max-width:760px;
-  margin:auto;
-  padding:16px;
+  max-width:720px;
+  margin:0 auto;
+  padding:15px 10px;
   text-align:center;
   border-radius:16px;
-  background:linear-gradient(135deg,#ffe5a2,#b77a1c);
+  background:linear-gradient(135deg,#ffe39a,#bd8125);
   color:#080808;
+  font-size:16px;
   font-weight:950;
-  box-shadow:0 12px 40px rgba(0,0,0,.65);
+  box-shadow:0 12px 40px rgba(0,0,0,.7);
 }
 
-/* =========================
-   MOBILE
-========================= */
+
+/* ==============================
+   모바일
+============================== */
 
 @media(max-width:760px){
 
-  .hero{
-    padding:40px 14px 24px;
+  .navInner{
+    height:58px;
   }
 
-  .hero h1{
-    font-size:clamp(46px,15vw,70px);
+  .logo{
+    font-size:12px;
   }
 
-  .heroDesc{
-    font-size:14px;
+  .navCall{
+    padding:8px 13px;
+    font-size:13px;
   }
 
-  .priceStrip{
-    grid-template-columns:1fr;
-  }
+  /*
+    모바일에서는 이미지가
+    좌우 화면 끝까지 정확히 꽉 차게
+  */
 
-  .priceItem{
-    padding:14px 8px;
-    border-right:0;
-    border-bottom:1px solid var(--line);
-  }
-
-  .priceItem:last-child{
-    border-bottom:0;
-  }
-
-  /* 모바일 화면 끝에서 끝까지 */
-  .bannerSection{
+  .mainVisual{
     width:100vw;
-    margin-left:calc(50% - 50vw);
-    padding:0 0 25px;
+    margin:0;
+    padding:0;
   }
 
-  .longBanner{
+  .mainVisualLink{
+    display:block;
     width:100%;
     max-width:none;
+    margin:0;
   }
 
-  .longBanner img{
+  .mainVisual img{
+    display:block;
     width:100%;
     height:auto;
-    border-radius:0;
-    box-shadow:none;
+    margin:0;
+    padding:0;
+    border:0;
+  }
+
+  .section{
+    padding:42px 0;
   }
 
   .pageGrid{
@@ -634,12 +575,8 @@ footer{
     grid-template-columns:1fr;
   }
 
-  .section{
-    padding:42px 0;
-  }
-
-  .seoBox{
-    padding:21px 18px;
+  .attendanceBox{
+    padding:20px 14px;
   }
 
   .attendanceRow{
@@ -650,203 +587,175 @@ footer{
     font-size:14px;
   }
 
+  .attendanceCount{
+    font-size:19px;
+  }
+
+  .seoBox{
+    padding:21px 18px;
+  }
+
   .fixedCall{
-    padding:14px 10px;
+    padding:14px 8px;
   }
 }
+
+
+/* PC 대형화면 */
+
+@media(min-width:1200px){
+
+  .mainVisualLink{
+    max-width:1200px;
+  }
+
+}
+
 </style>
 </head>
 
+
 <body>
 
+
+<!-- ==================================
+     상단
+================================== -->
+
 <header class="nav">
+
   <div class="navInner">
-    <div class="logo">CHEONAN PREMIUM</div>
-    <a class="navCall" href="tel:01075196883">☎ 전화문의</a>
+
+    <div class="logo">
+      CHEONAN PREMIUM
+    </div>
+
+    <a class="navCall" href="tel:01075196883">
+      ☎ 전화문의
+    </a>
+
   </div>
+
 </header>
+
+
 
 <main>
 
-<!-- =========================
-     HERO
-========================= -->
 
-<section class="hero">
+<!-- ==================================
+     ★ 홈페이지 들어오자마자 보이는 이미지
+================================== -->
 
-  <div class="heroSmall">CHEONAN PREMIUM NIGHT</div>
+<section class="mainVisual">
 
-  <h1>
-    <span class="goldText">천안유흥킹</span>
-  </h1>
-
-  <div class="certified">
-    👑 천안 최저가 인증업소
-  </div>
-
-  <p class="heroDesc">
-    천안노래방 · 천안노래클럽 · 천안가라오케 · 하이퍼블릭 · 다국적<br>
-    원하는 업종을 한 곳에서 빠르게 확인하세요.
-  </p>
-
-  <div class="priceStrip">
-
-    <div class="priceItem">
-      <small>일반 · 퍼블릭 코스</small>
-      <strong>10만원</strong>
-    </div>
-
-    <div class="priceItem">
-      <small>하이퍼블릭 · 셔츠룸</small>
-      <strong>15만원</strong>
-    </div>
-
-    <div class="priceItem">
-      <small>다국적 코스</small>
-      <strong>10만원</strong>
-    </div>
-
-  </div>
-
-  <a class="mainCall" href="tel:01075196883">
-    ☎ 010-7519-6883 바로 문의
-  </a>
-
-</section>
-
-
-<!-- =========================
-     초장형 메인 이미지
-========================= -->
-
-<section class="bannerSection">
-
-  <a class="longBanner"
-     href="tel:01075196883"
-     aria-label="전화 문의 010-7519-6883">
+  <a
+    class="mainVisualLink"
+    href="tel:01075196883"
+    aria-label="010-7519-6883 전화문의"
+  >
 
     <img
       src="cheonan-premium.png"
-      alt="천안노래방 천안노래클럽 천안가라오케 천안하퍼 하이퍼블릭 다국적 이용 안내"
-      fetchpriority="high">
+      alt="천안유흥킹 천안노래방 천안노래클럽 천안가라오케 천안하이퍼블릭 천안다국적 이용 안내"
+      fetchpriority="high"
+    >
 
   </a>
 
 </section>
 
 
-<!-- =========================
-     업종별 상세페이지
-========================= -->
 
-<section class="section">
-
-  <div class="wrap">
-
-    <div class="sectionTitle">
-      <small>CHEONAN GUIDE</small>
-      <h2>천안 업종별 이용안내</h2>
-      <p>원하는 업종을 선택하면 상세 안내 페이지로 이동합니다.</p>
-    </div>
-
-    <div class="pageGrid">
-
-      <a class="pageLink" href="/cheonan-noraebang.html">
-        <div class="icon">🎤</div>
-        <strong>천안노래방</strong>
-        <span>노래방 이용안내</span>
-      </a>
-
-      <a class="pageLink" href="/cheonanclub.html">
-        <div class="icon">✨</div>
-        <strong>천안노래클럽</strong>
-        <span>노래클럽 안내</span>
-      </a>
-
-      <a class="pageLink" href="/cheonankaraoke.html">
-        <div class="icon">🥂</div>
-        <strong>천안가라오케</strong>
-        <span>가라오케 안내</span>
-      </a>
-
-      <a class="pageLink" href="/cheonanhapeo.html">
-        <div class="icon">👑</div>
-        <strong>천안하퍼</strong>
-        <span>하이퍼블릭 안내</span>
-      </a>
-
-      <a class="pageLink" href="/cheonan-multinational.html">
-        <div class="icon">🌏</div>
-        <strong>천안다국적</strong>
-        <span>다국적 노래방 안내</span>
-      </a>
-
-    </div>
-
-  </div>
-
-</section>
-
-
-<!-- =========================
-     오늘 현황
-========================= -->
+<!-- ==================================
+     오늘 운영 현황
+================================== -->
 
 <section class="section" id="today">
 
   <div class="wrap">
 
     <div class="sectionTitle">
+
       <small>TODAY STATUS</small>
+
       <h2>오늘의 운영 현황</h2>
-      <p>업종별 오늘의 안내 현황을 확인하세요.</p>
+
+      <p>
+        업종별 오늘의 안내 현황을 확인하세요.
+      </p>
+
     </div>
+
 
     <div class="attendanceBox">
 
-      <div class="todayDate" id="todayDate">
+      <div
+        class="todayDate"
+        id="todayDate"
+      >
         TODAY
       </div>
 
+
       <div class="attendanceList">
 
+
         <div class="attendanceRow">
+
           <div class="attendanceName">
             🟢 퍼블릭 오늘 안내 인원
           </div>
+
           <div class="attendanceCount">
             <span id="publicCount">--</span>명
           </div>
+
         </div>
 
+
         <div class="attendanceRow">
+
           <div class="attendanceName">
             🟢 하이퍼블릭 오늘 안내 인원
           </div>
+
           <div class="attendanceCount">
             <span id="highCount">--</span>명
           </div>
+
         </div>
 
+
         <div class="attendanceRow">
+
           <div class="attendanceName">
             🟢 다국적 오늘 안내 인원
           </div>
+
           <div class="attendanceCount">
             <span id="globalCount">--</span>명
           </div>
+
         </div>
 
+
       </div>
+
 
       <div class="statusLine">
+
         <span class="statusDot"></span>
+
         현재 정상 영업중
+
       </div>
 
+
       <div class="attendanceNote">
-        ※ 표시 인원은 당일 업종별 안내용 수치이며 실제 현황은 문의 시 확인해주세요.
+        ※ 당일 상세 현황은 전화 문의를 통해 확인해주세요.
       </div>
+
 
     </div>
 
@@ -855,38 +764,137 @@ footer{
 </section>
 
 
-<!-- =========================
-     서비스
-========================= -->
+
+<!-- ==================================
+     업종별 상세페이지
+================================== -->
 
 <section class="section">
 
   <div class="wrap">
 
+
     <div class="sectionTitle">
-      <small>PREMIUM SERVICE</small>
-      <h2>편하게 문의하세요</h2>
+
+      <small>CHEONAN GUIDE</small>
+
+      <h2>
+        천안 업종별 이용안내
+      </h2>
+
+      <p>
+        원하는 업종을 선택하면 상세 안내 페이지로 이동합니다.
+      </p>
+
     </div>
 
-    <div class="serviceGrid">
 
-      <div class="service">
-        <div class="serviceIcon">🚘</div>
-        <strong>천안 전지역 픽업</strong>
-        <span>위치와 방문 시간을 알려주시면 안내해드립니다.</span>
-      </div>
+    <div class="pageGrid">
 
-      <div class="service">
-        <div class="serviceIcon">🎂</div>
-        <strong>생일 서비스</strong>
-        <span>특별한 날 방문 시 예약 단계에서 문의해주세요.</span>
-      </div>
 
-      <div class="service">
-        <div class="serviceIcon">📞</div>
-        <strong>빠른 전화 상담</strong>
-        <span>업종·가격·이용방법을 한 번에 안내받으세요.</span>
-      </div>
+      <a
+        class="pageLink"
+        href="/cheonan-noraebang.html"
+      >
+
+        <div class="pageIcon">
+          🎤
+        </div>
+
+        <strong>
+          천안노래방
+        </strong>
+
+        <span>
+          노래방 이용안내
+        </span>
+
+      </a>
+
+
+
+      <a
+        class="pageLink"
+        href="/cheonanclub.html"
+      >
+
+        <div class="pageIcon">
+          ✨
+        </div>
+
+        <strong>
+          천안노래클럽
+        </strong>
+
+        <span>
+          노래클럽 안내
+        </span>
+
+      </a>
+
+
+
+      <a
+        class="pageLink"
+        href="/cheonankaraoke.html"
+      >
+
+        <div class="pageIcon">
+          🥂
+        </div>
+
+        <strong>
+          천안가라오케
+        </strong>
+
+        <span>
+          가라오케 안내
+        </span>
+
+      </a>
+
+
+
+      <a
+        class="pageLink"
+        href="/cheonanhapeo.html"
+      >
+
+        <div class="pageIcon">
+          👑
+        </div>
+
+        <strong>
+          천안하퍼
+        </strong>
+
+        <span>
+          하이퍼블릭 안내
+        </span>
+
+      </a>
+
+
+
+      <a
+        class="pageLink"
+        href="/cheonan-multinational.html"
+      >
+
+        <div class="pageIcon">
+          🌏
+        </div>
+
+        <strong>
+          천안다국적
+        </strong>
+
+        <span>
+          다국적 노래방 안내
+        </span>
+
+      </a>
+
 
     </div>
 
@@ -895,9 +903,92 @@ footer{
 </section>
 
 
-<!-- =========================
-     SEO 콘텐츠
-========================= -->
+
+<!-- ==================================
+     서비스
+================================== -->
+
+<section class="section">
+
+  <div class="wrap">
+
+
+    <div class="sectionTitle">
+
+      <small>PREMIUM SERVICE</small>
+
+      <h2>
+        이용 서비스 안내
+      </h2>
+
+    </div>
+
+
+    <div class="serviceGrid">
+
+
+      <div class="service">
+
+        <div class="serviceIcon">
+          🚘
+        </div>
+
+        <strong>
+          천안 전지역 픽업
+        </strong>
+
+        <span>
+          위치와 방문 시간을 알려주시면 안내해드립니다.
+        </span>
+
+      </div>
+
+
+      <div class="service">
+
+        <div class="serviceIcon">
+          🎂
+        </div>
+
+        <strong>
+          생일 서비스
+        </strong>
+
+        <span>
+          생일 방문 시 예약 단계에서 문의해주세요.
+        </span>
+
+      </div>
+
+
+      <div class="service">
+
+        <div class="serviceIcon">
+          📞
+        </div>
+
+        <strong>
+          빠른 전화 상담
+        </strong>
+
+        <span>
+          업종·가격·이용방법을 한 번에 안내받으세요.
+        </span>
+
+      </div>
+
+
+    </div>
+
+  </div>
+
+</section>
+
+
+
+<!-- ==================================
+     SEO 내용
+================================== -->
 
 <section class="section">
 
@@ -905,34 +996,66 @@ footer{
 
     <div class="seoBox">
 
+
       <h2>
         천안노래방 · 천안노래클럽 · 천안가라오케 이용안내
       </h2>
 
+
       <p>
-        <strong>천안노래방</strong>과
+        <strong>천안노래방</strong>,
         <strong>천안노래클럽</strong>,
         <strong>천안가라오케</strong>를 찾는 분들을 위해
         업종별 이용 정보를 안내하고 있습니다.
       </p>
 
+
       <p>
-        천안 퍼블릭, 천안 하이퍼블릭,
+        천안 퍼블릭과 천안 하이퍼블릭,
         천안하퍼 및 천안다국적 노래방 등
-        원하는 분위기와 예산에 맞춰 이용 정보를 확인할 수 있습니다.
+        원하는 분위기와 이용 방식에 맞춰
+        관련 정보를 확인할 수 있습니다.
       </p>
+
 
       <p>
         성정동 노래방, 성정동 노래클럽,
         성정동 가라오케를 비롯해
-        두정동·불당동 등 천안 지역 방문 관련 문의도 가능합니다.
+        두정동·불당동 등 천안 지역 관련
+        이용 정보를 안내합니다.
       </p>
 
+
       <p>
-        자세한 내용은 천안노래방·천안노래클럽·
-        천안가라오케·천안하퍼·천안다국적
-        전용 페이지에서 확인할 수 있습니다.
+        업종별 자세한 내용은 아래의
+        전용 상세페이지에서 확인할 수 있습니다.
       </p>
+
+
+      <div class="seoLinks">
+
+        <a href="/cheonan-noraebang.html">
+          천안노래방
+        </a>
+
+        <a href="/cheonanclub.html">
+          천안노래클럽
+        </a>
+
+        <a href="/cheonankaraoke.html">
+          천안가라오케
+        </a>
+
+        <a href="/cheonanhapeo.html">
+          천안하퍼·하이퍼블릭
+        </a>
+
+        <a href="/cheonan-multinational.html">
+          천안다국적
+        </a>
+
+      </div>
+
 
     </div>
 
@@ -941,56 +1064,85 @@ footer{
 </section>
 
 
-<!-- =========================
+
+<!-- ==================================
      FAQ
-========================= -->
+================================== -->
 
 <section class="section">
 
   <div class="wrap">
 
+
     <div class="sectionTitle">
+
       <small>FAQ</small>
-      <h2>자주 묻는 질문</h2>
+
+      <h2>
+        자주 묻는 질문
+      </h2>
+
     </div>
+
 
     <div class="faqWrap">
 
+
       <div class="faq">
-        <strong>Q. 픽업 가능한가요?</strong>
+
+        <strong>
+          Q. 픽업 가능한가요?
+        </strong>
+
         <span>
           천안 전지역 픽업을 안내하고 있습니다.
           위치와 시간에 따라 가능 여부를 전화로 확인해주세요.
         </span>
+
       </div>
 
+
       <div class="faq">
-        <strong>Q. 생일서비스가 있나요?</strong>
+
+        <strong>
+          Q. 생일서비스가 있나요?
+        </strong>
+
         <span>
           예약 시 생일 방문이라고 미리 말씀해주시면
-          서비스 내용을 안내드립니다.
+          관련 서비스 내용을 안내드립니다.
         </span>
+
       </div>
 
+
       <div class="faq">
+
         <strong>
           Q. 퍼블릭·하이퍼블릭·하퍼·다국적 중 어떤 업종을 선택해야 하나요?
         </strong>
+
         <span>
-          원하는 분위기와 예산을 말씀해주시면
-          업종별 특징을 안내해드립니다.
+          원하는 분위기와 이용 방식에 따라
+          업종별 특징을 확인할 수 있습니다.
         </span>
+
       </div>
 
+
       <div class="faq">
-        <strong>Q. 이용 금액은 어떻게 되나요?</strong>
+
+        <strong>
+          Q. 이용 금액은 어떻게 확인하나요?
+        </strong>
+
         <span>
-          기본 안내가는 퍼블릭 10만원,
-          하이퍼블릭 15만원,
-          다국적 10만원부터이며
-          상세 구성은 문의 시 확인해주세요.
+          업종별 안내 내용과 전화 문의를 통해
+          상세 이용 정보를 확인해주세요.
         </span>
+
       </div>
+
 
     </div>
 
@@ -999,28 +1151,38 @@ footer{
 </section>
 
 
-<!-- =========================
-     마지막 전화문의
-========================= -->
+
+<!-- ==================================
+     마지막 전화
+================================== -->
 
 <section class="section">
 
   <div class="wrap">
 
+
     <div class="cta">
 
-      <small>CHEONAN PREMIUM</small>
+      <small>
+        CHEONAN PREMIUM
+      </small>
 
-      <h2>지금 바로 문의하세요</h2>
+      <h2>
+        지금 바로 문의하세요
+      </h2>
 
       <p>
-        퍼블릭 · 하이퍼블릭 · 다국적<br>
-        픽업 · 생일서비스 · 이용안내
+        천안노래방 · 천안노래클럽 · 천안가라오케<br>
+        하이퍼블릭 · 다국적 · 픽업 · 이용안내
       </p>
 
-      <a class="ctaPhone" href="tel:01075196883">
+      <a
+        class="ctaPhone"
+        href="tel:01075196883"
+      >
         010-7519-6883
       </a>
+
 
     </div>
 
@@ -1028,24 +1190,37 @@ footer{
 
 </section>
 
+
 </main>
 
 
+
 <footer>
-  천안노래방 · 천안노래클럽 · 천안가라오케 · 천안하퍼 · 천안다국적 이용안내
+
+  천안노래방 · 천안노래클럽 · 천안가라오케 ·
+  천안하퍼 · 천안다국적 이용안내
+
 </footer>
 
 
-<a class="fixedCall" href="tel:01075196883">
+
+<!-- 하단 고정 전화버튼 -->
+
+<a
+  class="fixedCall"
+  href="tel:01075196883"
+>
   ☎ 전화 바로걸기 · 010-7519-6883
 </a>
 
 
-<!-- =========================
-     오늘 인원 자동 갱신
-========================= -->
+
+<!-- ==================================
+     오늘 인원 자동 표시
+================================== -->
 
 <script>
+
 (function(){
 
   const now = new Date();
@@ -1056,11 +1231,14 @@ footer{
   const dd =
     String(now.getDate()).padStart(2,'0');
 
+
   document.getElementById('todayDate').textContent =
     `TODAY ${mm}.${dd}`;
 
+
   const dateKey =
     Number(`${now.getFullYear()}${mm}${dd}`);
+
 
   function dailyNumber(seedOffset){
 
@@ -1072,7 +1250,9 @@ footer{
     x ^= x << 5;
 
     return 10 + (Math.abs(x) % 11);
+
   }
+
 
   document.getElementById('publicCount').textContent =
     dailyNumber(1);
@@ -1084,7 +1264,9 @@ footer{
     dailyNumber(3);
 
 })();
+
 </script>
+
 
 </body>
 </html>
